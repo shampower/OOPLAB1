@@ -82,5 +82,10 @@ int main()
     delete[] arr;
     arr = nullptr;
 
+    if (arr == nullptr)
+    {
+        std::cout << "Память освобождена. Указатель равен nullptr." << std::endl;
+    }
+
     return 0;
 }
