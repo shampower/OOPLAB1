@@ -1,16 +1,25 @@
 #include <iostream>
 #include <windows.h>
 
-
-void process(int*& arr, int size);
-
 struct SafeArray
 {
     int* data;
     int size;
 };
 
+void process(int*& arr, int size);
+void printSafe(const SafeArray& arr);
 SafeArray createArray(int size);
+int& getElement(SafeArray& arr, int index);
+void printSafe(const SafeArray& arr)
+{
+    for (int i = 0; i < arr.size; i++)
+    {
+        std::cout << arr.data[i] << " ";
+    }
+
+    std::cout << std::endl;
+}
 
 void process(int*& arr, int size)
 {
@@ -65,19 +74,32 @@ SafeArray createArray(int size)
     return arr;
 }
 
+int& getElement(SafeArray& arr, int index)
+{
+    static int errorValue = 0;
+
+    if (index < 0 || index >= arr.size)
+    {
+        std::cout << "Ошибка: индекс выходит за границы массива." << std::endl;
+        return errorValue;
+    }
+
+    return arr.data[index];
+}
+
 int main()
 {
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
+    // Задание 2
+
     int size;
 
-    std::cout << "Введите размер массива: ";
+    std::cout << "Введите размер динамического массива: ";
     std::cin >> size;
 
     int* arr = new int[size]{};
-
-    std::cout << "Массив создан. Размер: " << size << std::endl;
 
     std::cout << "Введите элементы массива:" << std::endl;
 
@@ -104,6 +126,21 @@ int main()
     {
         std::cout << "Память освобождена. Указатель равен nullptr." << std::endl;
     }
+
+    SafeArray myArr = createArray(5);
+
+    for (int i = 0; i < myArr.size; i++)
+    {
+        myArr.data[i] = i * 10;
+    }
+
+    getElement(myArr, 2) = 999;
+
+    std::cout << "SafeArray: ";
+    printSafe(myArr);
+
+    delete[] myArr.data;
+    myArr.data = nullptr;
 
     return 0;
 }
