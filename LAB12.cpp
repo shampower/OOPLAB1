@@ -10,6 +10,10 @@ struct SafeArray
 void process(int*& arr, int size);
 void printSafe(const SafeArray& arr);
 void reSizeArray(SafeArray& arr, int newSize);
+
+int** allocateMatrix(int rows, int cols);
+void fillMatrix(int** matrix, int rows, int cols);
+
 SafeArray createArray(int size);
 int& getElement(SafeArray& arr, int index);
 void printSafe(const SafeArray& arr)
@@ -124,6 +128,30 @@ int& getElement(SafeArray& arr, int index)
     }
 
     return arr.data[index];
+}
+
+int** allocateMatrix(int rows, int cols)
+{
+    int** matrix = new int*[rows];
+
+    for (int i = 0; i < rows; i++)
+    {
+        matrix[i] = new int[cols]{};
+    }
+
+    return matrix;
+}
+
+void fillMatrix(int** matrix, int rows, int cols)
+{
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < cols; j++)
+        {
+            std::cout << "Введите оценку [" << i << "][" << j << "]: ";
+            std::cin >> matrix[i][j];
+        }
+    }
 }
 
 int main()
