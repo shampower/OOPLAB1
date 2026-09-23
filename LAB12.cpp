@@ -4,6 +4,14 @@
 
 void process(int*& arr, int size);
 
+struct SafeArray
+{
+    int* data;
+    int size;
+};
+
+SafeArray createArray(int size);
+
 void process(int*& arr, int size)
 {
     int negativeIndex = -1;
@@ -45,6 +53,16 @@ void process(int*& arr, int size)
     }
 
     std::cout << std::endl;
+}
+
+SafeArray createArray(int size)
+{
+    SafeArray arr;
+
+    arr.size = size;
+    arr.data = new int[size]{};
+
+    return arr;
 }
 
 int main()
