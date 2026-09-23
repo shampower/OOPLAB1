@@ -55,5 +55,15 @@ int main()
     std::cout << "Исходный массив:" << std::endl;
     printArray(arr);
 
+    swapElements(arr, 0, 9);
+
+    std::cout << "swapElements:" << std::endl;
+    printArray(arr);
+
+    multiplyByTwo(arr);
+
+    std::cout << "multiplyByTwo" << std::endl;
+    printArray(arr);
+
     return 0;
 }
