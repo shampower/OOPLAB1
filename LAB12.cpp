@@ -1,5 +1,6 @@
 #include <iostream>
 #include <windows.h>
+#include <string>
 
 struct SafeArray
 {
@@ -13,6 +14,7 @@ void reSizeArray(SafeArray& arr, int newSize);
 
 int** allocateMatrix(int rows, int cols);
 void fillMatrix(int** matrix, int rows, int cols);
+void printMatrix(int** matrix, int rows, int cols, bool showBorders = true, std::string title = "Matrix");
 
 SafeArray createArray(int size);
 int& getElement(SafeArray& arr, int index);
@@ -150,6 +152,42 @@ void fillMatrix(int** matrix, int rows, int cols)
         {
             std::cout << "Введите оценку [" << i << "][" << j << "]: ";
             std::cin >> matrix[i][j];
+        }
+    }
+}
+
+void printMatrix(int** matrix, int rows, int cols, bool showBorders, std::string title)
+{
+    std::cout << std::endl;
+    std::cout << title << std::endl;
+
+    if (showBorders)
+    {
+        std::cout << "------------------------" << std::endl;
+    }
+
+    for (int i = 0; i < rows; i++)
+    {
+        if (showBorders)
+        {
+            std::cout << "| ";
+        }
+
+        for (int j = 0; j < cols; j++)
+        {
+            std::cout << matrix[i][j] << " ";
+
+            if (showBorders)
+            {
+                std::cout << "| ";
+            }
+        }
+
+        std::cout << std::endl;
+
+        if (showBorders)
+        {
+            std::cout << "------------------------" << std::endl;
         }
     }
 }
