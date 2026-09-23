@@ -9,6 +9,7 @@ struct SafeArray
 
 void process(int*& arr, int size);
 void printSafe(const SafeArray& arr);
+void reSizeArray(SafeArray& arr, int newSize);
 SafeArray createArray(int size);
 int& getElement(SafeArray& arr, int index);
 void printSafe(const SafeArray& arr)
@@ -19,6 +20,44 @@ void printSafe(const SafeArray& arr)
     }
 
     std::cout << std::endl;
+}
+
+void reSizeArray(SafeArray& arr, int newSize)
+{
+    int* newData = new int[newSize]{};
+
+    int elementsToCopy;
+
+    if (arr.size < newSize)
+    {
+        elementsToCopy = arr.size;
+    }
+    else
+    {
+        elementsToCopy = newSize;
+    }
+
+    for (int i = 0; i < elementsToCopy; i++)
+    {
+        newData[i] = arr.data[i];
+    }
+
+    if (newSize < arr.size)
+    {
+        std::cout << "Удаленные элементы: ";
+
+        for (int i = newSize; i < arr.size; i++)
+        {
+            std::cout << arr.data[i] << " ";
+        }
+
+        std::cout << std::endl;
+    }
+
+    delete[] arr.data;
+
+    arr.data = newData;
+    arr.size = newSize;
 }
 
 void process(int*& arr, int size)
@@ -137,6 +176,18 @@ int main()
     getElement(myArr, 2) = 999;
 
     std::cout << "SafeArray: ";
+    printSafe(myArr);
+
+    std::cout << "Уменьшаем массив до 3 элементов:" << std::endl;
+    reSizeArray(myArr, 3);
+
+    std::cout << "После уменьшения: ";
+    printSafe(myArr);
+
+    std::cout << "Увеличиваем массив до 5 элементов:" << std::endl;
+    reSizeArray(myArr, 5);
+
+    std::cout << "После увеличения: ";
     printSafe(myArr);
 
     delete[] myArr.data;
