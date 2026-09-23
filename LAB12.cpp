@@ -14,6 +14,7 @@ void reSizeArray(SafeArray& arr, int newSize);
 
 int** allocateMatrix(int rows, int cols);
 void fillMatrix(int** matrix, int rows, int cols);
+void freeMatrix(int** matrix, int rows);
 void printMatrix(int** matrix, int rows, int cols, bool showBorders = true, std::string title = "Matrix");
 
 SafeArray createArray(int size);
@@ -192,6 +193,16 @@ void printMatrix(int** matrix, int rows, int cols, bool showBorders, std::string
     }
 }
 
+void freeMatrix(int** matrix, int rows)
+{
+    for (int i = 0; i < rows; i++)
+    {
+        delete[] matrix[i];
+    }
+
+    delete[] matrix;
+}
+
 int main()
 {
     SetConsoleOutputCP(CP_UTF8);
@@ -258,6 +269,25 @@ int main()
 
     delete[] myArr.data;
     myArr.data = nullptr;
+
+    int rows = 3;
+    int cols = 4;
+
+    int** matrix = allocateMatrix(rows, cols);
+
+    fillMatrix(matrix, rows, cols);
+
+    std::cout << std::endl << "Вызов 1:" << std::endl;
+    printMatrix(matrix, rows, cols);
+
+    std::cout << std::endl << "Вызов 2:" << std::endl;
+    printMatrix(matrix, rows, cols, true, "Оценки студентов");
+
+    std::cout << std::endl << "Вызов 3:" << std::endl;
+    printMatrix(matrix, rows, cols, false, "Без рамки");
+
+    freeMatrix(matrix, rows);
+    matrix = nullptr;
 
     return 0;
 }
