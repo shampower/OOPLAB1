@@ -36,6 +36,15 @@ void process(int*& arr, int size)
 
     std::cout << "Первый отрицательный элемент находится под индексом: "
               << negativeIndex << std::endl;
+
+    std::cout << "Новый массив: ";
+
+    for (int i = 0; i < newSize; i++)
+    {
+        std::cout << arr[i] << " ";
+    }
+
+    std::cout << std::endl;
 }
 
 int main()
@@ -51,6 +60,24 @@ int main()
     int* arr = new int[size]{};
 
     std::cout << "Массив создан. Размер: " << size << std::endl;
+
+    std::cout << "Введите элементы массива:" << std::endl;
+
+    for (int i = 0; i < size; i++)
+    {
+        std::cin >> arr[i];
+    }
+
+    std::cout << "Исходный массив: ";
+
+    for (int i = 0; i < size; i++)
+    {
+        std::cout << arr[i] << " ";
+    }
+
+    std::cout << std::endl;
+
+    process(arr, size);
 
     delete[] arr;
     arr = nullptr;
