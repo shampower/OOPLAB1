@@ -1,24 +1,117 @@
+
 #include <iostream>
 #include <windows.h>
 #include <string>
 
+/**
+ * @brief Структура для хранения динамического массива.
+ *
+ * Содержит указатель на массив и его текущий размер.
+ */
 struct SafeArray
 {
     int* data;
     int size;
 };
 
+/**
+ * @brief Удаляет элементы массива, начиная с первого отрицательного.
+ *
+ * Находит первый отрицательный элемент, создает новый массив,
+ * копирует в него элементы до найденного отрицательного элемента
+ * и освобождает старую память.
+ *
+ * @param arr Ссылка на указатель динамического массива.
+ * @param size Размер исходного массива.
+ */
 void process(int*& arr, int size);
+
+/**
+ * @brief Выводит элементы безопасного массива.
+ *
+ * @param arr Безопасный массив для вывода.
+ */
 void printSafe(const SafeArray& arr);
+
+/**
+ * @brief Изменяет размер безопасного массива.
+ *
+ * При уменьшении размера выводит удаляемые элементы.
+ * При увеличении новые элементы заполняются нулями.
+ *
+ * @param arr Безопасный массив, размер которого необходимо изменить.
+ * @param newSize Новый размер массива.
+ */
 void reSizeArray(SafeArray& arr, int newSize);
 
+/**
+ * @brief Выделяет память под двумерный динамический массив.
+ *
+ * @param rows Количество строк матрицы.
+ * @param cols Количество столбцов матрицы.
+ * @return Указатель на созданную двумерную матрицу.
+ */
 int** allocateMatrix(int rows, int cols);
-void fillMatrix(int** matrix, int rows, int cols);
-void freeMatrix(int** matrix, int rows);
-void printMatrix(int** matrix, int rows, int cols, bool showBorders = true, std::string title = "Matrix");
 
+/**
+ * @brief Заполняет матрицу значениями, введенными пользователем.
+ *
+ * @param matrix Двумерная динамическая матрица.
+ * @param rows Количество строк матрицы.
+ * @param cols Количество столбцов матрицы.
+ */
+void fillMatrix(int** matrix, int rows, int cols);
+
+/**
+ * @brief Освобождает память, выделенную под двумерную матрицу.
+ *
+ * Сначала освобождает память каждой строки, затем память массива указателей.
+ *
+ * @param matrix Двумерная динамическая матрица.
+ * @param rows Количество строк матрицы.
+ */
+void freeMatrix(int** matrix, int rows);
+
+/**
+ * @brief Выводит матрицу на экран.
+ *
+ * Может выводить матрицу с рамкой или без нее.
+ * Также позволяет задать заголовок.
+ *
+ * @param matrix Двумерная динамическая матрица.
+ * @param rows Количество строк матрицы.
+ * @param cols Количество столбцов матрицы.
+ * @param showBorders Показывать ли рамку вокруг матрицы.
+ * @param title Заголовок матрицы.
+ */
+void printMatrix(
+    int** matrix,
+    int rows,
+    int cols,
+    bool showBorders = true,
+    std::string title = "Matrix"
+);
+
+/**
+ * @brief Создает безопасный динамический массив.
+ *
+ * @param size Размер создаваемого массива.
+ * @return Структура SafeArray с выделенной памятью.
+ */
 SafeArray createArray(int size);
+
+/**
+ * @brief Возвращает ссылку на элемент безопасного массива.
+ *
+ * Проверяет выход индекса за границы массива.
+ * При некорректном индексе возвращает ссылку на безопасную переменную.
+ *
+ * @param arr Безопасный массив.
+ * @param index Индекс требуемого элемента.
+ * @return Ссылка на элемент массива или безопасную переменную при ошибке.
+ */
 int& getElement(SafeArray& arr, int index);
+
 void printSafe(const SafeArray& arr)
 {
     for (int i = 0; i < arr.size; i++)
