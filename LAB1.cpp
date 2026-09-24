@@ -3,11 +3,41 @@
 #include <ctime>
 #include <windows.h>
 
+/**
+ * @brief Заполняет массив случайными числами.
+ *
+ * @param arr Массив из 10 элементов, который необходимо заполнить.
+ */
 void fillArray(int (&arr)[10]);
+
+/**
+ * @brief Выводит элементы массива на экран.
+ *
+ * @param arr Массив из 10 элементов для вывода.
+ */
 void printArray(const int (&arr)[10]);
+
+/**
+ * @brief Меняет местами два элемента массива.
+ *
+ * @param arr Массив из 10 элементов.
+ * @param i Индекс первого элемента.
+ * @param j Индекс второго элемента.
+ */
 void swapElements(int (&arr)[10], int i, int j);
+
+/**
+ * @brief Умножает каждый элемент массива на 2.
+ *
+ * @param arr Массив из 10 элементов.
+ */
 void multiplyByTwo(int (&arr)[10]);
 
+/**
+ * @brief Заполняет массив случайными числами.
+ *
+ * @param arr Массив из 10 элементов, который необходимо заполнить.
+ */
 void fillArray(int (&arr)[10])
 {
     for (auto& x : arr)
@@ -16,6 +46,11 @@ void fillArray(int (&arr)[10])
     }
 }
 
+/**
+ * @brief Выводит элементы массива на экран.
+ *
+ * @param arr Массив из 10 элементов для вывода.
+ */
 void printArray(const int (&arr)[10])
 {
     for (const auto& x : arr)
@@ -26,6 +61,13 @@ void printArray(const int (&arr)[10])
     std::cout << std::endl;
 }
 
+/**
+ * @brief Меняет местами два элемента массива.
+ *
+ * @param arr Массив из 10 элементов.
+ * @param i Индекс первого элемента.
+ * @param j Индекс второго элемента.
+ */
 void swapElements(int (&arr)[10], int i, int j)
 {
     int temp = arr[i];
@@ -33,6 +75,11 @@ void swapElements(int (&arr)[10], int i, int j)
     arr[j] = temp;
 }
 
+/**
+ * @brief Умножает каждый элемент массива на 2.
+ *
+ * @param arr Массив из 10 элементов.
+ */
 void multiplyByTwo(int (&arr)[10])
 {
     for (int& x : arr)
@@ -41,6 +88,11 @@ void multiplyByTwo(int (&arr)[10])
     }
 }
 
+/**
+ * @brief Точка входа в программу.
+ *
+ * @return Код завершения программы.
+ */
 int main()
 {
     SetConsoleOutputCP(CP_UTF8);
