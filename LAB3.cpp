@@ -136,14 +136,24 @@ int main()
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    SafeArray myArr = createArray(5);
+    int size;
+
+    std::cout << "Введите размер массива: ";
+    std::cin >> size;
+
+    SafeArray myArr = createArray(size);
+
+    std::cout << "Введите элементы массива:" << std::endl;
 
     for (int i = 0; i < myArr.size; i++)
     {
-        myArr.data[i] = i * 10;
+        std::cin >> myArr.data[i];
     }
 
-    getElement(myArr, 2) = 999;
+    if (myArr.size > 2)
+    {
+        getElement(myArr, 2) = 999;
+    }
 
     std::cout << "SafeArray: ";
     printSafe(myArr);

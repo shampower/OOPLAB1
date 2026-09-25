@@ -69,36 +69,34 @@ void printMatrix(
 )
 {
     std::cout << std::endl;
-    std::cout << title << std::endl;
-
+    std::cout << title << std:endl;
     if (showBorders)
     {
-        std::cout << "------------------------" << std::endl;
+        std::cout << "********************" << std::endl;
     }
-
     for (int i = 0; i < rows; i++)
     {
         if (showBorders)
         {
-            std::cout << "| ";
+            std::cout << "* "
         }
 
         for (int j = 0; j < cols; j++)
         {
             std::cout << matrix[i][j] << " ";
-
-            if (showBorders)
-            {
-                std::cout << "| ";
-            }
         }
-
-        std::cout << std::endl;
-
         if (showBorders)
         {
-            std::cout << "------------------------" << std::endl;
+            std::cout << "*" << std::endl;
         }
+        else
+        {
+            std::cout << std::endl;
+        }
+    }
+    if (showBorders)
+    {
+        std::cout << "********************" << std::endl;
     }
 }
 
@@ -133,8 +131,14 @@ int main()
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    int rows = 3;
-    int cols = 4;
+    int rows;
+    int cols;
+
+    std::cout << "Введите количество строк: ";
+    std::cin >> rows;
+
+    std::cout << "Введите количество столбцов: ";
+    std::cin >> cols;
 
     int** matrix = allocateMatrix(rows, cols);
 
