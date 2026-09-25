@@ -1,0 +1,131 @@
+\doxysection{LAB4.\+cpp File Reference}
+\hypertarget{_l_a_b4_8cpp}{}\label{_l_a_b4_8cpp}\index{LAB4.cpp@{LAB4.cpp}}
+
+
+Лабораторная работа №4. Динамическая матрица.  
+
+
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$windows.\+h$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{_l_a_b4_8cpp_a316a1e4a31e8d114fc40e8a6d5cf6d1f}{allocate\+Matrix}} (int rows, int cols)
+\begin{DoxyCompactList}\small\item\em Выделяет память под двумерный динамический массив. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_l_a_b4_8cpp_a57b3e14ecd6179a364c9e60ca2131531}{fill\+Matrix}} (int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}matrix, int rows, int cols)
+\begin{DoxyCompactList}\small\item\em Заполняет матрицу значениями, введенными пользователем. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_l_a_b4_8cpp_a90ddfe2b84de560b666394f6fbe85a66}{print\+Matrix}} (int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}matrix, int rows, int cols, bool show\+Borders=true, std::\+string title="{}Matrix"{})
+\begin{DoxyCompactList}\small\item\em Выводит матрицу на экран. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_l_a_b4_8cpp_a29b6394c95f08e982275bdcd9b919ef0}{free\+Matrix}} (int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}matrix, int rows)
+\begin{DoxyCompactList}\small\item\em Освобождает память, выделенную под двумерную матрицу. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{_l_a_b4_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Точка входа в программу. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Лабораторная работа №4. Динамическая матрица. 
+
+Программа создает, заполняет, выводит и освобождает двумерный динамический массив. 
+
+\label{_l_a_b4_8cpp_doc-func-members}
+\Hypertarget{_l_a_b4_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_l_a_b4_8cpp_a316a1e4a31e8d114fc40e8a6d5cf6d1f}\index{LAB4.cpp@{LAB4.cpp}!allocateMatrix@{allocateMatrix}}
+\index{allocateMatrix@{allocateMatrix}!LAB4.cpp@{LAB4.cpp}}
+\doxysubsubsection{\texorpdfstring{allocateMatrix()}{allocateMatrix()}}
+{\footnotesize\ttfamily \label{_l_a_b4_8cpp_a316a1e4a31e8d114fc40e8a6d5cf6d1f} 
+int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} allocate\+Matrix (\begin{DoxyParamCaption}\item[{int}]{rows}{, }\item[{int}]{cols}{}\end{DoxyParamCaption})}
+
+
+
+Выделяет память под двумерный динамический массив. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & Количество строк матрицы. \\
+\hline
+{\em cols} & Количество столбцов матрицы. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Указатель на созданную двумерную матрицу. 
+\end{DoxyReturn}
+\Hypertarget{_l_a_b4_8cpp_a57b3e14ecd6179a364c9e60ca2131531}\index{LAB4.cpp@{LAB4.cpp}!fillMatrix@{fillMatrix}}
+\index{fillMatrix@{fillMatrix}!LAB4.cpp@{LAB4.cpp}}
+\doxysubsubsection{\texorpdfstring{fillMatrix()}{fillMatrix()}}
+{\footnotesize\ttfamily \label{_l_a_b4_8cpp_a57b3e14ecd6179a364c9e60ca2131531} 
+void fill\+Matrix (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{matrix}{, }\item[{int}]{rows}{, }\item[{int}]{cols}{}\end{DoxyParamCaption})}
+
+
+
+Заполняет матрицу значениями, введенными пользователем. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & Двумерная динамическая матрица. \\
+\hline
+{\em rows} & Количество строк матрицы. \\
+\hline
+{\em cols} & Количество столбцов матрицы. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_l_a_b4_8cpp_a29b6394c95f08e982275bdcd9b919ef0}\index{LAB4.cpp@{LAB4.cpp}!freeMatrix@{freeMatrix}}
+\index{freeMatrix@{freeMatrix}!LAB4.cpp@{LAB4.cpp}}
+\doxysubsubsection{\texorpdfstring{freeMatrix()}{freeMatrix()}}
+{\footnotesize\ttfamily \label{_l_a_b4_8cpp_a29b6394c95f08e982275bdcd9b919ef0} 
+void free\+Matrix (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{matrix}{, }\item[{int}]{rows}{}\end{DoxyParamCaption})}
+
+
+
+Освобождает память, выделенную под двумерную матрицу. 
+
+Сначала освобождает память каждой строки, затем память массива указателей.
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & Двумерная динамическая матрица. \\
+\hline
+{\em rows} & Количество строк матрицы. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_l_a_b4_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{LAB4.cpp@{LAB4.cpp}!main@{main}}
+\index{main@{main}!LAB4.cpp@{LAB4.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{_l_a_b4_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Точка входа в программу. 
+
+Выполняет задание №4 с двумерным динамическим массивом.
+
+\begin{DoxyReturn}{Returns}
+Код завершения программы. 
+\end{DoxyReturn}
+\Hypertarget{_l_a_b4_8cpp_a90ddfe2b84de560b666394f6fbe85a66}\index{LAB4.cpp@{LAB4.cpp}!printMatrix@{printMatrix}}
+\index{printMatrix@{printMatrix}!LAB4.cpp@{LAB4.cpp}}
+\doxysubsubsection{\texorpdfstring{printMatrix()}{printMatrix()}}
+{\footnotesize\ttfamily \label{_l_a_b4_8cpp_a90ddfe2b84de560b666394f6fbe85a66} 
+void print\+Matrix (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{matrix}{, }\item[{int}]{rows}{, }\item[{int}]{cols}{, }\item[{bool}]{show\+Borders}{ = {\ttfamily true}, }\item[{std::\+string}]{title}{ = {\ttfamily "{}Matrix"{}}}\end{DoxyParamCaption})}
+
+
+
+Выводит матрицу на экран. 
+
+Может выводить матрицу с рамкой или без нее. Также позволяет задать заголовок.
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & Двумерная динамическая матрица. \\
+\hline
+{\em rows} & Количество строк матрицы. \\
+\hline
+{\em cols} & Количество столбцов матрицы. \\
+\hline
+{\em show\+Borders} & Показывать ли рамку вокруг матрицы. \\
+\hline
+{\em title} & Заголовок матрицы. \\
+\hline
+\end{DoxyParams}

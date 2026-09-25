@@ -1,0 +1,126 @@
+\doxysection{LAB3.\+cpp File Reference}
+\hypertarget{_l_a_b3_8cpp}{}\label{_l_a_b3_8cpp}\index{LAB3.cpp@{LAB3.cpp}}
+
+
+Лабораторная работа №3. Безопасный динамический массив.  
+
+
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$windows.\+h$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}}
+\begin{DoxyCompactList}\small\item\em Структура для хранения динамического массива. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}} \doxymbox{\hyperlink{_l_a_b3_8cpp_a7ff63be79ad745808c2835d23619453c}{create\+Array}} (int size)
+\begin{DoxyCompactList}\small\item\em Создает безопасный динамический массив. \end{DoxyCompactList}\item 
+int \& \doxymbox{\hyperlink{_l_a_b3_8cpp_a96b5fa358374961176edf6d8e54cfe1d}{get\+Element}} (\doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}} \&arr, int index)
+\begin{DoxyCompactList}\small\item\em Возвращает ссылку на элемент безопасного массива. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_l_a_b3_8cpp_a7351a105bbeff3b7b137f744fb529256}{print\+Safe}} (const \doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}} \&arr)
+\begin{DoxyCompactList}\small\item\em Выводит элементы безопасного массива. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_l_a_b3_8cpp_a4830250a472974ce4e2dd8502be2109e}{re\+Size\+Array}} (\doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}} \&arr, int new\+Size)
+\begin{DoxyCompactList}\small\item\em Изменяет размер безопасного массива. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{_l_a_b3_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Точка входа в программу. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Лабораторная работа №3. Безопасный динамический массив. 
+
+Программа демонстрирует работу со структурой \doxylink{struct_safe_array}{Safe\+Array}, проверку границ массива и изменение его размера. 
+
+\label{_l_a_b3_8cpp_doc-func-members}
+\Hypertarget{_l_a_b3_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_l_a_b3_8cpp_a7ff63be79ad745808c2835d23619453c}\index{LAB3.cpp@{LAB3.cpp}!createArray@{createArray}}
+\index{createArray@{createArray}!LAB3.cpp@{LAB3.cpp}}
+\doxysubsubsection{\texorpdfstring{createArray()}{createArray()}}
+{\footnotesize\ttfamily \label{_l_a_b3_8cpp_a7ff63be79ad745808c2835d23619453c} 
+\doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}} create\+Array (\begin{DoxyParamCaption}\item[{int}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Создает безопасный динамический массив. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Размер создаваемого массива. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Структура \doxylink{struct_safe_array}{Safe\+Array} с выделенной памятью. 
+\end{DoxyReturn}
+\Hypertarget{_l_a_b3_8cpp_a96b5fa358374961176edf6d8e54cfe1d}\index{LAB3.cpp@{LAB3.cpp}!getElement@{getElement}}
+\index{getElement@{getElement}!LAB3.cpp@{LAB3.cpp}}
+\doxysubsubsection{\texorpdfstring{getElement()}{getElement()}}
+{\footnotesize\ttfamily \label{_l_a_b3_8cpp_a96b5fa358374961176edf6d8e54cfe1d} 
+int \& get\+Element (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}} \&}]{arr}{, }\item[{int}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Возвращает ссылку на элемент безопасного массива. 
+
+Проверяет выход индекса за границы массива. При некорректном индексе возвращает ссылку на безопасную переменную.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & Безопасный массив. \\
+\hline
+{\em index} & Индекс требуемого элемента. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ссылка на элемент массива или безопасную переменную при ошибке. 
+\end{DoxyReturn}
+\Hypertarget{_l_a_b3_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{LAB3.cpp@{LAB3.cpp}!main@{main}}
+\index{main@{main}!LAB3.cpp@{LAB3.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{_l_a_b3_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Точка входа в программу. 
+
+Выполняет задание №3 с безопасным динамическим массивом.
+
+\begin{DoxyReturn}{Returns}
+Код завершения программы. 
+\end{DoxyReturn}
+\Hypertarget{_l_a_b3_8cpp_a7351a105bbeff3b7b137f744fb529256}\index{LAB3.cpp@{LAB3.cpp}!printSafe@{printSafe}}
+\index{printSafe@{printSafe}!LAB3.cpp@{LAB3.cpp}}
+\doxysubsubsection{\texorpdfstring{printSafe()}{printSafe()}}
+{\footnotesize\ttfamily \label{_l_a_b3_8cpp_a7351a105bbeff3b7b137f744fb529256} 
+void print\+Safe (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}} \&}]{arr}{}\end{DoxyParamCaption})}
+
+
+
+Выводит элементы безопасного массива. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & Безопасный массив для вывода. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_l_a_b3_8cpp_a4830250a472974ce4e2dd8502be2109e}\index{LAB3.cpp@{LAB3.cpp}!reSizeArray@{reSizeArray}}
+\index{reSizeArray@{reSizeArray}!LAB3.cpp@{LAB3.cpp}}
+\doxysubsubsection{\texorpdfstring{reSizeArray()}{reSizeArray()}}
+{\footnotesize\ttfamily \label{_l_a_b3_8cpp_a4830250a472974ce4e2dd8502be2109e} 
+void re\+Size\+Array (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}} \&}]{arr}{, }\item[{int}]{new\+Size}{}\end{DoxyParamCaption})}
+
+
+
+Изменяет размер безопасного массива. 
+
+При уменьшении размера выводит удаляемые элементы. При увеличении новые элементы заполняются нулями.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & Безопасный массив, размер которого необходимо изменить. \\
+\hline
+{\em new\+Size} & Новый размер массива. \\
+\hline
+\end{DoxyParams}
