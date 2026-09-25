@@ -1,9 +1,17 @@
+/**
+ * @file LAB12.cpp
+ * @brief Лабораторные работы №2, №3 и №4.
+ *
+ * Программа демонстрирует работу с динамическими массивами,
+ * структурами, изменением размера массива и динамической матрицей.
+ */
 
 #include <iostream>
 #include <windows.h>
 #include <string>
 
 
+ /**
  * @brief Структура для хранения динамического массива.
  *
  * Содержит указатель на массив и его текущий размер.
@@ -299,6 +307,14 @@ void freeMatrix(int** matrix, int rows)
     delete[] matrix;
 }
 
+/**
+ * @brief Точка входа в программу.
+ *
+ * Последовательно выполняет задания 2, 3 и 4.
+ *
+ * @return Код завершения программы.
+ */
+
 int main()
 {
     SetConsoleOutputCP(CP_UTF8);
@@ -364,7 +380,7 @@ int main()
     printSafe(myArr);
 
     delete[] myArr.data;
-    myArr.data = nullptr;
+    myArr.data = nullptrf;
 
     int rows = 3;
     int cols = 4;
