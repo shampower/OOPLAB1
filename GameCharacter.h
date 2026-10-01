@@ -21,6 +21,19 @@ private:
     static int objectCount;
 
 public:
+    GameCharacter();
+    GameCharacter(
+        const std::string& name,
+        int health,
+        int level,
+        int strength,
+        int agility
+    );
+    ~GameCharacter();
+
+    void takeDamage(int damage);
+    void heal(int amount);
+    void levelUp();
 };
 
 #endif

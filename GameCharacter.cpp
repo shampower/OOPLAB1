@@ -48,3 +48,40 @@ GameCharacter::GameCharacter(
 
     objectCount++;
 }
+
+GameCharacter::~GameCharacter()
+{
+    objectCount--;
+}
+
+void GameCharacter::takeDamage(int damage)
+{
+    if (damage <= 0 || !isAlive)
+        return;
+
+    health -= damage;
+
+    if (health <= 0)
+    {
+        health = 0;
+        isAlive = false;
+    }
+}
+
+void GameCharacter::heal(int amount)
+{
+    if (amount <= 0 || !isAlive)
+        return;
+
+    health += amount;
+
+    if (health > 100)
+        health = 100;
+}
+
+void GameCharacter::levelUp()
+{
+    level++;
+    health = 100;
+    isAlive = true;
+}
