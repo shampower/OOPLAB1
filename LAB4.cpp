@@ -69,16 +69,16 @@ void printMatrix(
 )
 {
     std::cout << std::endl;
-    std::cout << title << std:endl;
+    std::cout << title << std::endl;
     if (showBorders)
     {
-        std::cout << "********************" << std::endl;
+        std::cout << "*********" << std::endl;
     }
     for (int i = 0; i < rows; i++)
     {
         if (showBorders)
         {
-            std::cout << "* "
+            std::cout << "* ";
         }
 
         for (int j = 0; j < cols; j++)
@@ -96,7 +96,7 @@ void printMatrix(
     }
     if (showBorders)
     {
-        std::cout << "********************" << std::endl;
+        std::cout << "*********" << std::endl;
     }
 }
 
