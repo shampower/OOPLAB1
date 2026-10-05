@@ -1,4 +1,5 @@
 #include "GameCharacter.h"
+#include <iostream>
 
 int GameCharacter::objectCount = 0;
 
@@ -84,4 +85,50 @@ void GameCharacter::levelUp()
     level++;
     health = 100;
     isAlive = true;
+}
+
+const std::string& GameCharacter::getName() const
+{
+    return name;
+}
+
+int GameCharacter::getHealth() const
+{
+    return health;
+}
+
+int GameCharacter::getLevel() const
+{
+    return level;
+}
+
+bool GameCharacter::getIsAlive() const
+{
+    return isAlive;
+}
+
+int GameCharacter::getStrength() const
+{
+    return stats.strength;
+}
+
+int GameCharacter::getAgility() const
+{
+    return stats.agility;
+}
+
+void GameCharacter::printInfo() const
+{
+    std::cout << "Имя: " << name << std::endl;
+    std::cout << "Здоровье: " << health << std::endl;
+    std::cout << "Уровень: " << level << std::endl;
+    std::cout << "Состояние: "
+              << (isAlive ? "жив" : "мертв") << std::endl;
+    std::cout << "Сила: " << stats.strength << std::endl;
+    std::cout << "Ловкость: " << stats.agility << std::endl;
+}
+
+int GameCharacter::getObjectCount()
+{
+    return objectCount;
 }

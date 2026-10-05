@@ -22,6 +22,7 @@ private:
 
 public:
     GameCharacter();
+
     GameCharacter(
         const std::string& name,
         int health,
@@ -29,11 +30,23 @@ public:
         int strength,
         int agility
     );
+
     ~GameCharacter();
 
     void takeDamage(int damage);
     void heal(int amount);
     void levelUp();
+
+    const std::string& getName() const;
+    int getHealth() const;
+    int getLevel() const;
+    bool getIsAlive() const;
+    int getStrength() const;
+    int getAgility() const;
+
+    void printInfo() const;
+
+    static int getObjectCount();
 };
 
 #endif
