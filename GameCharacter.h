@@ -1,13 +1,37 @@
+/**
+ * @file GameCharacter.h
+ * @brief Объявление класса игрового персонажа.
+ *
+ * Класс GameCharacter хранит состояние персонажа,
+ * его характеристики и предоставляет методы для
+ * изменения и получения этого состояния.
+ */
+
 #ifndef GAMECHARACTER_H
 #define GAMECHARACTER_H
 
 #include <string>
+
+/**
+ * @brief Характеристики игрового персонажа.
+ */
 
 struct CharacterStats
 {
     int strength;
     int agility;
 };
+
+/**
+ * @class GameCharacter
+ * @brief Представляет персонажа компьютерной игры.
+ *
+ * Инварианты класса:
+ * - здоровье находится в диапазоне от 0 до 100;
+ * - уровень не меньше 1;
+ * - имя не является пустой строкой;
+ * - сила и ловкость не могут быть отрицательными.
+ */
 
 class GameCharacter
 {
@@ -30,6 +54,8 @@ public:
         int strength,
         int agility
     );
+
+    GameCharacter(const GameCharacter& other);
 
     ~GameCharacter();
 

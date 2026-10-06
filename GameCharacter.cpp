@@ -50,6 +50,16 @@ GameCharacter::GameCharacter(
     objectCount++;
 }
 
+GameCharacter::GameCharacter(const GameCharacter& other)
+    : name(other.name),
+      health(other.health),
+      level(other.level),
+      isAlive(other.isAlive),
+      stats(other.stats)
+{
+    objectCount++;
+}
+
 GameCharacter::~GameCharacter()
 {
     objectCount--;
@@ -82,9 +92,11 @@ void GameCharacter::heal(int amount)
 
 void GameCharacter::levelUp()
 {
+    if (!isAlive)
+        return;
+
     level++;
     health = 100;
-    isAlive = true;
 }
 
 const std::string& GameCharacter::getName() const
