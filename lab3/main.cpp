@@ -53,6 +53,26 @@ int main() {
         std::cout << "c /= 0 -> ошибка: " << e.what() << '\n';
     }
     std::cout << "c не испортился: " << c << "\n\n";
+    std::cout << "===== 4. + - * / (через += -= *= /=) =====\n";
+    Vector3D sum = a + b;
+    Vector3D diff = a - b;
+    Vector3D doubled = a * 2;
+    Vector3D halfB = 0.5 * b;
+    Vector3D divided = a / 2;
+    std::cout << "a + b   = " << sum << '\n';
+    std::cout << "a - b   = " << diff << '\n';
+    std::cout << "a * 2   = " << doubled << '\n';
+    std::cout << "0.5 * b = " << halfB << '\n';
+    std::cout << "a / 2   = " << divided << '\n';
+    std::cout << "a и b не изменились: a = " << a << ", b = " << b << '\n';
+    std::cout << "Скалярное произведение a и b = " << a.dot(b) << '\n';
+    try {
+        Vector3D bad = a / 0;
+        std::cout << bad << '\n';
+    } catch (const std::invalid_argument& e) {
+        std::cout << "a / 0 -> ошибка: " << e.what() << '\n';
+    }
+    std::cout << '\n';
 
     std::cout << "\nКонец main, дальше деструкторы оставшихся векторов:\n";
     return 0;
