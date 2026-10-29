@@ -28,6 +28,12 @@ public:
     Vector3D& operator-=(const Vector3D& other);
     Vector3D& operator*=(double k);
     Vector3D& operator/=(double k);
+    
+    friend Vector3D operator+(Vector3D lhs, const Vector3D& rhs);
+    friend Vector3D operator-(Vector3D lhs, const Vector3D& rhs);
+    friend Vector3D operator*(Vector3D lhs, double k);
+    friend Vector3D operator*(double k, Vector3D rhs);
+    friend Vector3D operator/(Vector3D lhs, double k);
     Vector3D operator--(int);
 
     friend std::ostream& operator<<(std::ostream& out, const Vector3D& v);
