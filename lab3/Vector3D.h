@@ -32,6 +32,13 @@ public:
     friend Vector3D operator+(Vector3D lhs, const Vector3D& rhs);
     friend Vector3D operator-(Vector3D lhs, const Vector3D& rhs);
     friend Vector3D operator*(Vector3D lhs, double k);
+    
+    friend bool operator<(const Vector3D& a, const Vector3D& b);
+    friend bool operator>(const Vector3D& a, const Vector3D& b);
+    friend bool operator<=(const Vector3D& a, const Vector3D& b);
+    friend bool operator>=(const Vector3D& a, const Vector3D& b);
+    friend bool operator==(const Vector3D& a, const Vector3D& b);
+    friend bool operator!=(const Vector3D& a, const Vector3D& b);
     friend Vector3D operator*(double k, Vector3D rhs);
     friend Vector3D operator/(Vector3D lhs, double k);
     Vector3D operator--(int);
