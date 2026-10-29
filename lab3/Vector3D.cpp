@@ -110,3 +110,29 @@ Vector3D& Vector3D::operator/=(double k) {
     z /= k;
     return *this;
 }
+
+
+Vector3D operator+(Vector3D lhs, const Vector3D& rhs) {
+    lhs += rhs;
+    return lhs;
+}
+
+Vector3D operator-(Vector3D lhs, const Vector3D& rhs) {
+    lhs -= rhs;
+    return lhs;
+}
+
+Vector3D operator*(Vector3D lhs, double k) {
+    lhs *= k;
+    return lhs;
+}
+
+Vector3D operator*(double k, Vector3D rhs) {
+    rhs *= k;
+    return rhs;
+}
+
+Vector3D operator/(Vector3D lhs, double k) {
+    lhs /= k;
+    return lhs;
+}
