@@ -73,6 +73,17 @@ int main() {
         std::cout << "a / 0 -> ошибка: " << e.what() << '\n';
     }
     std::cout << '\n';
+        std::cout << "===== 5. Сравнения (по длине) =====\n";
+    Vector3D d(0, 0, 5);
+    std::cout << "|a| = " << a.length() << ", |b| = " << b.length()
+              << ", |d| = " << d.length() << '\n';
+    std::cout << "a <  b     : " << (a < b) << '\n';
+    std::cout << "a >  b     : " << (a > b) << '\n';
+    std::cout << "b <= a     : " << (b <= a) << '\n';
+    std::cout << "a >= aCopy : " << (a >= aCopy) << '\n';
+    std::cout << "a == aCopy : " << (a == aCopy) << '\n';
+    std::cout << "a != b     : " << (a != b) << '\n';
+    std::cout << "a == d     : " << (a == d) << " (сравниваются длины, а не координаты)\n\n";
 
     std::cout << "\nКонец main, дальше деструкторы оставшихся векторов:\n";
     return 0;
