@@ -4,6 +4,11 @@
 
 #include <stdexcept>
 
+
+namespace {
+    const double EPS = 1e-9;
+}
+
 int Vector3D::createdCount = 0;
 
 Vector3D::Vector3D() : x(0), y(0), z(0), lengthCalls(0) {
@@ -135,4 +140,29 @@ Vector3D operator*(double k, Vector3D rhs) {
 Vector3D operator/(Vector3D lhs, double k) {
     lhs /= k;
     return lhs;
+}
+
+
+bool operator<(const Vector3D& a, const Vector3D& b) {
+    return a.length() < b.length() - EPS;
+}
+
+bool operator>(const Vector3D& a, const Vector3D& b) {
+    return b < a;
+}
+
+bool operator<=(const Vector3D& a, const Vector3D& b) {
+    return !(b < a);
+}
+
+bool operator>=(const Vector3D& a, const Vector3D& b) {
+    return !(a < b);
+}
+
+bool operator==(const Vector3D& a, const Vector3D& b) {
+    return std::fabs(a.length() - b.length()) <= EPS;
+}
+
+bool operator!=(const Vector3D& a, const Vector3D& b) {
+    return !(a == b);
 }
