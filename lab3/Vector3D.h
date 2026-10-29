@@ -44,6 +44,8 @@ public:
     Vector3D operator--(int);
 
     friend std::ostream& operator<<(std::ostream& out, const Vector3D& v);
+    
+    explicit operator double() const;
 
     double length() const;
     double dot(const Vector3D& other) const;
