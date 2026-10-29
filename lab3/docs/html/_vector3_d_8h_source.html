@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Лабораторная работа №3: Vector3D: Исходный файл Vector3D.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Лабораторная работа №3: Vector3D
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('_vector3_d_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Vector3D.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_vector3_d_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef VECTOR3D_H</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define VECTOR3D_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span></div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_vector3_d.html">   17</a></span><span class="keyword">class </span><a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a> {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_vector3_d.html#a3c086dfccfc57dd996e9b8600098a430">   19</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="class_vector3_d.html#a3c086dfccfc57dd996e9b8600098a430">x</a>; </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_vector3_d.html#adcec384756103d26d1181e45d5a0fd78">   20</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="class_vector3_d.html#adcec384756103d26d1181e45d5a0fd78">y</a>; </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_vector3_d.html#a7321f3ff785f275c4d83f7d1b951752a">   21</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="class_vector3_d.html#a7321f3ff785f275c4d83f7d1b951752a">z</a>; </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_vector3_d.html#afd21a54f7f3c2d0b60e49fba14fb0c84">   22</a></span>    <span class="keyword">mutable</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_vector3_d.html#afd21a54f7f3c2d0b60e49fba14fb0c84">lengthCalls</a>; </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_vector3_d.html#ae90b9491db90965874f8a2bd3b6d4f2c">   24</a></span>    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_vector3_d.html#ae90b9491db90965874f8a2bd3b6d4f2c">createdCount</a>; </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">explicit</span> <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a>(<span class="keywordtype">double</span> value);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a>(<span class="keywordtype">double</span> <a class="code hl_variable" href="class_vector3_d.html#a3c086dfccfc57dd996e9b8600098a430">x</a>, <span class="keywordtype">double</span> <a class="code hl_variable" href="class_vector3_d.html#adcec384756103d26d1181e45d5a0fd78">y</a>, <span class="keywordtype">double</span> <a class="code hl_variable" href="class_vector3_d.html#a7321f3ff785f275c4d83f7d1b951752a">z</a>);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a>&amp; other);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_vector3_d.html#ac5856e429419cc3b323448142f6593ec">   53</a></span>    <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a>&amp; <a class="code hl_function" href="class_vector3_d.html#ac5856e429419cc3b323448142f6593ec">operator=</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a>&amp; other) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">~Vector3D</a>();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a>&amp; <a class="code hl_function" href="class_vector3_d.html#ac0976f69fab9e3d719202f630f71e5c6">operator++</a>();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a> <a class="code hl_function" href="class_vector3_d.html#ac0976f69fab9e3d719202f630f71e5c6">operator++</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a>&amp; <a class="code hl_function" href="class_vector3_d.html#a9587ff5a4eed9b368a31e108846423d6">operator--</a>();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a> <a class="code hl_function" href="class_vector3_d.html#a9587ff5a4eed9b368a31e108846423d6">operator--</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a>&amp; <a class="code hl_function" href="class_vector3_d.html#a546241ecc51e49e05e7672ffde26bbf8">operator+=</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a>&amp; other);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a>&amp; <a class="code hl_function" href="class_vector3_d.html#a799f712590c47cc435b929718586555c">operator-=</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a>&amp; other);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a>&amp; <a class="code hl_function" href="class_vector3_d.html#ad4ee8cd5020243f14fbe6008832f5252">operator*=</a>(<span class="keywordtype">double</span> k);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a>&amp; <a class="code hl_function" href="class_vector3_d.html#a28a46216d8a88c18543cc2eaec0203d0">operator/=</a>(<span class="keywordtype">double</span> k);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keyword">friend</span> <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a> <a class="code hl_friend" href="class_vector3_d.html#af0d48f19b504cc71c7af49b5f3709cac">operator+</a>(<a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a> lhs, <span class="keyword">const</span> <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a>&amp; rhs);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keyword">friend</span> <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a> <a class="code hl_friend" href="class_vector3_d.html#a60e6c6a96f162dd19925b58b7d02b8fd">operator-</a>(<a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a> lhs, <span class="keyword">const</span> <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a>&amp; rhs);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keyword">friend</span> <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a> <a class="code hl_friend" href="class_vector3_d.html#acc665881203f773a9c7550d1e4bf294c">operator*</a>(<a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a> lhs, <span class="keywordtype">double</span> k);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keyword">friend</span> <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a> <a class="code hl_friend" href="class_vector3_d.html#acc665881203f773a9c7550d1e4bf294c">operator*</a>(<span class="keywordtype">double</span> k, <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a> rhs);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keyword">friend</span> <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a> <a class="code hl_friend" href="class_vector3_d.html#ab9e0915cdba6c3139ef92ae0f486249c">operator/</a>(<a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a> lhs, <span class="keywordtype">double</span> k);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code hl_friend" href="class_vector3_d.html#af2899258858cfcb9f9044dd71e46c5f4">operator&lt;</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a>&amp; a, <span class="keyword">const</span> <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a>&amp; b);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code hl_friend" href="class_vector3_d.html#a8c6eef497206a3daf0f3fcbaaf22de2f">operator&gt;</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a>&amp; a, <span class="keyword">const</span> <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a>&amp; b);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code hl_friend" href="class_vector3_d.html#ae42fab8d56d96f7d705bdbedaf247cfd">operator&lt;=</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a>&amp; a, <span class="keyword">const</span> <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a>&amp; b);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code hl_friend" href="class_vector3_d.html#a26a3aa0c73b5668a2508cf4e80314d91">operator&gt;=</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a>&amp; a, <span class="keyword">const</span> <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a>&amp; b);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code hl_friend" href="class_vector3_d.html#a710ecbbaa26d921c713ecf7d1e21fdec">operator==</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a>&amp; a, <span class="keyword">const</span> <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a>&amp; b);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code hl_friend" href="class_vector3_d.html#a2b3314f2543fa703afcc78bb4fa756f4">operator!=</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a>&amp; a, <span class="keyword">const</span> <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a>&amp; b);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keyword">friend</span> std::ostream&amp; <a class="code hl_friend" href="class_vector3_d.html#a8347ec585d1f353059e7f5e59a3385a5">operator&lt;&lt;</a>(std::ostream&amp; out, <span class="keyword">const</span> <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a>&amp; v);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keyword">explicit</span> <span class="keyword">operator</span> double() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="class_vector3_d.html#a4ddb90e85e10f0f32475725cb966a5ce">length</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="class_vector3_d.html#a0da987130c3ca5253ca428409798b1e6">dot</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a>&amp; other) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="class_vector3_d.html#a6eb2b565b36b32858b79714151fc6df0">getX</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="class_vector3_d.html#a40ae4bf4605ba79725876e00861f74c6">getY</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="class_vector3_d.html#a9a4b4c6ee6f7bffa65fb81b2ace4a8eb">getZ</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_vector3_d.html#abaed1a1f6d0262a75e73a5b7a139086f">getLengthCalls</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_vector3_d.html#a7810908924eaffb849c5d818fb96904b">getCreatedCount</a>();</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>};</div>
+</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_vector3_d_html_a0b11a8d75da427b27443d8a94d0d296c"><div class="ttname"><a href="class_vector3_d.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D::Vector3D</a></div><div class="ttdeci">Vector3D()</div><div class="ttdoc">Конструктор по умолчанию: нулевой вектор (0, 0, 0).</div><div class="ttdef"><b>Определения</b> Vector3D.cpp:14</div></div>
+<div class="ttc" id="aclass_vector3_d_html_a0da987130c3ca5253ca428409798b1e6"><div class="ttname"><a href="class_vector3_d.html#a0da987130c3ca5253ca428409798b1e6">Vector3D::dot</a></div><div class="ttdeci">double dot(const Vector3D &amp;other) const</div><div class="ttdoc">Скалярное произведение с другим вектором.</div><div class="ttdef"><b>Определения</b> Vector3D.cpp:45</div></div>
+<div class="ttc" id="aclass_vector3_d_html_a26a3aa0c73b5668a2508cf4e80314d91"><div class="ttname"><a href="class_vector3_d.html#a26a3aa0c73b5668a2508cf4e80314d91">Vector3D::operator&gt;=</a></div><div class="ttdeci">friend bool operator&gt;=(const Vector3D &amp;a, const Vector3D &amp;b)</div><div class="ttdoc">Длина a не меньше длины b.</div><div class="ttdef"><b>Определения</b> Vector3D.cpp:158</div></div>
+<div class="ttc" id="aclass_vector3_d_html_a28a46216d8a88c18543cc2eaec0203d0"><div class="ttname"><a href="class_vector3_d.html#a28a46216d8a88c18543cc2eaec0203d0">Vector3D::operator/=</a></div><div class="ttdeci">Vector3D &amp; operator/=(double k)</div><div class="ttdoc">Делит вектор на число.</div><div class="ttdef"><b>Определения</b> Vector3D.cpp:109</div></div>
+<div class="ttc" id="aclass_vector3_d_html_a2b3314f2543fa703afcc78bb4fa756f4"><div class="ttname"><a href="class_vector3_d.html#a2b3314f2543fa703afcc78bb4fa756f4">Vector3D::operator!=</a></div><div class="ttdeci">friend bool operator!=(const Vector3D &amp;a, const Vector3D &amp;b)</div><div class="ttdoc">Длины не равны.</div><div class="ttdef"><b>Определения</b> Vector3D.cpp:166</div></div>
+<div class="ttc" id="aclass_vector3_d_html_a3c086dfccfc57dd996e9b8600098a430"><div class="ttname"><a href="class_vector3_d.html#a3c086dfccfc57dd996e9b8600098a430">Vector3D::x</a></div><div class="ttdeci">double x</div><div class="ttdoc">Координата X.</div><div class="ttdef"><b>Определения</b> Vector3D.h:19</div></div>
+<div class="ttc" id="aclass_vector3_d_html_a40ae4bf4605ba79725876e00861f74c6"><div class="ttname"><a href="class_vector3_d.html#a40ae4bf4605ba79725876e00861f74c6">Vector3D::getY</a></div><div class="ttdeci">double getY() const</div><div class="ttdoc">Координата Y.</div><div class="ttdef"><b>Определения</b> Vector3D.cpp:50</div></div>
+<div class="ttc" id="aclass_vector3_d_html_a4ddb90e85e10f0f32475725cb966a5ce"><div class="ttname"><a href="class_vector3_d.html#a4ddb90e85e10f0f32475725cb966a5ce">Vector3D::length</a></div><div class="ttdeci">double length() const</div><div class="ttdoc">Длина вектора. Увеличивает счётчик lengthCalls.</div><div class="ttdef"><b>Определения</b> Vector3D.cpp:40</div></div>
+<div class="ttc" id="aclass_vector3_d_html_a546241ecc51e49e05e7672ffde26bbf8"><div class="ttname"><a href="class_vector3_d.html#a546241ecc51e49e05e7672ffde26bbf8">Vector3D::operator+=</a></div><div class="ttdeci">Vector3D &amp; operator+=(const Vector3D &amp;other)</div><div class="ttdoc">Прибавляет другой вектор.</div><div class="ttdef"><b>Определения</b> Vector3D.cpp:88</div></div>
+<div class="ttc" id="aclass_vector3_d_html_a60e6c6a96f162dd19925b58b7d02b8fd"><div class="ttname"><a href="class_vector3_d.html#a60e6c6a96f162dd19925b58b7d02b8fd">Vector3D::operator-</a></div><div class="ttdeci">friend Vector3D operator-(Vector3D lhs, const Vector3D &amp;rhs)</div><div class="ttdoc">Разность векторов (реализована через -=).</div><div class="ttdef"><b>Определения</b> Vector3D.cpp:125</div></div>
+<div class="ttc" id="aclass_vector3_d_html_a6eb2b565b36b32858b79714151fc6df0"><div class="ttname"><a href="class_vector3_d.html#a6eb2b565b36b32858b79714151fc6df0">Vector3D::getX</a></div><div class="ttdeci">double getX() const</div><div class="ttdoc">Координата X.</div><div class="ttdef"><b>Определения</b> Vector3D.cpp:49</div></div>
+<div class="ttc" id="aclass_vector3_d_html_a710ecbbaa26d921c713ecf7d1e21fdec"><div class="ttname"><a href="class_vector3_d.html#a710ecbbaa26d921c713ecf7d1e21fdec">Vector3D::operator==</a></div><div class="ttdeci">friend bool operator==(const Vector3D &amp;a, const Vector3D &amp;b)</div><div class="ttdoc">Длины равны (с точностью EPS).</div><div class="ttdef"><b>Определения</b> Vector3D.cpp:162</div></div>
+<div class="ttc" id="aclass_vector3_d_html_a7321f3ff785f275c4d83f7d1b951752a"><div class="ttname"><a href="class_vector3_d.html#a7321f3ff785f275c4d83f7d1b951752a">Vector3D::z</a></div><div class="ttdeci">double z</div><div class="ttdoc">Координата Z.</div><div class="ttdef"><b>Определения</b> Vector3D.h:21</div></div>
+<div class="ttc" id="aclass_vector3_d_html_a7810908924eaffb849c5d818fb96904b"><div class="ttname"><a href="class_vector3_d.html#a7810908924eaffb849c5d818fb96904b">Vector3D::getCreatedCount</a></div><div class="ttdeci">static int getCreatedCount()</div><div class="ttdoc">Сколько векторов создано с запуска программы.</div><div class="ttdef"><b>Определения</b> Vector3D.cpp:57</div></div>
+<div class="ttc" id="aclass_vector3_d_html_a799f712590c47cc435b929718586555c"><div class="ttname"><a href="class_vector3_d.html#a799f712590c47cc435b929718586555c">Vector3D::operator-=</a></div><div class="ttdeci">Vector3D &amp; operator-=(const Vector3D &amp;other)</div><div class="ttdoc">Вычитает другой вектор.</div><div class="ttdef"><b>Определения</b> Vector3D.cpp:95</div></div>
+<div class="ttc" id="aclass_vector3_d_html_a8347ec585d1f353059e7f5e59a3385a5"><div class="ttname"><a href="class_vector3_d.html#a8347ec585d1f353059e7f5e59a3385a5">Vector3D::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, const Vector3D &amp;v)</div><div class="ttdoc">Вывод вектора в поток в виде (x, y, z).</div><div class="ttdef"><b>Определения</b> Vector3D.cpp:35</div></div>
+<div class="ttc" id="aclass_vector3_d_html_a8c6eef497206a3daf0f3fcbaaf22de2f"><div class="ttname"><a href="class_vector3_d.html#a8c6eef497206a3daf0f3fcbaaf22de2f">Vector3D::operator&gt;</a></div><div class="ttdeci">friend bool operator&gt;(const Vector3D &amp;a, const Vector3D &amp;b)</div><div class="ttdoc">Длина a больше длины b.</div><div class="ttdef"><b>Определения</b> Vector3D.cpp:150</div></div>
+<div class="ttc" id="aclass_vector3_d_html_a9587ff5a4eed9b368a31e108846423d6"><div class="ttname"><a href="class_vector3_d.html#a9587ff5a4eed9b368a31e108846423d6">Vector3D::operator--</a></div><div class="ttdeci">Vector3D &amp; operator--()</div><div class="ttdoc">Префиксный декремент: уменьшает длину на 1%.</div><div class="ttdef"><b>Определения</b> Vector3D.cpp:74</div></div>
+<div class="ttc" id="aclass_vector3_d_html_a9a4b4c6ee6f7bffa65fb81b2ace4a8eb"><div class="ttname"><a href="class_vector3_d.html#a9a4b4c6ee6f7bffa65fb81b2ace4a8eb">Vector3D::getZ</a></div><div class="ttdeci">double getZ() const</div><div class="ttdoc">Координата Z.</div><div class="ttdef"><b>Определения</b> Vector3D.cpp:51</div></div>
+<div class="ttc" id="aclass_vector3_d_html_ab9e0915cdba6c3139ef92ae0f486249c"><div class="ttname"><a href="class_vector3_d.html#ab9e0915cdba6c3139ef92ae0f486249c">Vector3D::operator/</a></div><div class="ttdeci">friend Vector3D operator/(Vector3D lhs, double k)</div><div class="ttdoc">Вектор, делённый на число (реализовано через /=).</div><div class="ttdef"><b>Определения</b> Vector3D.cpp:140</div></div>
+<div class="ttc" id="aclass_vector3_d_html_abaed1a1f6d0262a75e73a5b7a139086f"><div class="ttname"><a href="class_vector3_d.html#abaed1a1f6d0262a75e73a5b7a139086f">Vector3D::getLengthCalls</a></div><div class="ttdeci">int getLengthCalls() const</div><div class="ttdoc">Сколько раз у объекта считали длину.</div><div class="ttdef"><b>Определения</b> Vector3D.cpp:53</div></div>
+<div class="ttc" id="aclass_vector3_d_html_ac0976f69fab9e3d719202f630f71e5c6"><div class="ttname"><a href="class_vector3_d.html#ac0976f69fab9e3d719202f630f71e5c6">Vector3D::operator++</a></div><div class="ttdeci">Vector3D &amp; operator++()</div><div class="ttdoc">Префиксный инкремент: увеличивает длину на 1%.</div><div class="ttdef"><b>Определения</b> Vector3D.cpp:61</div></div>
+<div class="ttc" id="aclass_vector3_d_html_ac5856e429419cc3b323448142f6593ec"><div class="ttname"><a href="class_vector3_d.html#ac5856e429419cc3b323448142f6593ec">Vector3D::operator=</a></div><div class="ttdeci">Vector3D &amp; operator=(const Vector3D &amp;other)=default</div><div class="ttdoc">Копирующее присваивание (стандартное поведение).</div></div>
+<div class="ttc" id="aclass_vector3_d_html_acc665881203f773a9c7550d1e4bf294c"><div class="ttname"><a href="class_vector3_d.html#acc665881203f773a9c7550d1e4bf294c">Vector3D::operator*</a></div><div class="ttdeci">friend Vector3D operator*(Vector3D lhs, double k)</div><div class="ttdoc">Вектор, умноженный на число (реализовано через *=).</div><div class="ttdef"><b>Определения</b> Vector3D.cpp:130</div></div>
+<div class="ttc" id="aclass_vector3_d_html_ad4ee8cd5020243f14fbe6008832f5252"><div class="ttname"><a href="class_vector3_d.html#ad4ee8cd5020243f14fbe6008832f5252">Vector3D::operator*=</a></div><div class="ttdeci">Vector3D &amp; operator*=(double k)</div><div class="ttdoc">Умножает вектор на число.</div><div class="ttdef"><b>Определения</b> Vector3D.cpp:102</div></div>
+<div class="ttc" id="aclass_vector3_d_html_adcec384756103d26d1181e45d5a0fd78"><div class="ttname"><a href="class_vector3_d.html#adcec384756103d26d1181e45d5a0fd78">Vector3D::y</a></div><div class="ttdeci">double y</div><div class="ttdoc">Координата Y.</div><div class="ttdef"><b>Определения</b> Vector3D.h:20</div></div>
+<div class="ttc" id="aclass_vector3_d_html_ae42fab8d56d96f7d705bdbedaf247cfd"><div class="ttname"><a href="class_vector3_d.html#ae42fab8d56d96f7d705bdbedaf247cfd">Vector3D::operator&lt;=</a></div><div class="ttdeci">friend bool operator&lt;=(const Vector3D &amp;a, const Vector3D &amp;b)</div><div class="ttdoc">Длина a не больше длины b.</div><div class="ttdef"><b>Определения</b> Vector3D.cpp:154</div></div>
+<div class="ttc" id="aclass_vector3_d_html_ae90b9491db90965874f8a2bd3b6d4f2c"><div class="ttname"><a href="class_vector3_d.html#ae90b9491db90965874f8a2bd3b6d4f2c">Vector3D::createdCount</a></div><div class="ttdeci">static int createdCount</div><div class="ttdoc">Сколько векторов создано с запуска программы (включая копии).</div><div class="ttdef"><b>Определения</b> Vector3D.h:24</div></div>
+<div class="ttc" id="aclass_vector3_d_html_af0d48f19b504cc71c7af49b5f3709cac"><div class="ttname"><a href="class_vector3_d.html#af0d48f19b504cc71c7af49b5f3709cac">Vector3D::operator+</a></div><div class="ttdeci">friend Vector3D operator+(Vector3D lhs, const Vector3D &amp;rhs)</div><div class="ttdoc">Сумма векторов (реализована через +=).</div><div class="ttdef"><b>Определения</b> Vector3D.cpp:120</div></div>
+<div class="ttc" id="aclass_vector3_d_html_af2899258858cfcb9f9044dd71e46c5f4"><div class="ttname"><a href="class_vector3_d.html#af2899258858cfcb9f9044dd71e46c5f4">Vector3D::operator&lt;</a></div><div class="ttdeci">friend bool operator&lt;(const Vector3D &amp;a, const Vector3D &amp;b)</div><div class="ttdoc">Длина a меньше длины b.</div><div class="ttdef"><b>Определения</b> Vector3D.cpp:146</div></div>
+<div class="ttc" id="aclass_vector3_d_html_afd21a54f7f3c2d0b60e49fba14fb0c84"><div class="ttname"><a href="class_vector3_d.html#afd21a54f7f3c2d0b60e49fba14fb0c84">Vector3D::lengthCalls</a></div><div class="ttdeci">int lengthCalls</div><div class="ttdoc">Сколько раз у объекта считали длину; mutable — меняется даже у const-объекта</div><div class="ttdef"><b>Определения</b> Vector3D.h:22</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="_vector3_d_8h.html">Vector3D.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

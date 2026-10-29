@@ -1,0 +1,1225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Лабораторная работа №3: Vector3D: Класс Vector3D</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Лабораторная работа №3: Vector3D
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_vector3_d.html','','class_vector3_d-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс Vector3D</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Трёхмерный вектор (x, y, z).  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_vector3_d_8h_source.html">Vector3D.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a0b11a8d75da427b27443d8a94d0d296c" id="r_a0b11a8d75da427b27443d8a94d0d296c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a> ()</td></tr>
+<tr class="memdesc:a0b11a8d75da427b27443d8a94d0d296c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор по умолчанию: нулевой вектор (0, 0, 0).  <br /></td></tr>
+<tr class="memitem:a5110fb8c13b91a63bc679a29ee94e788" id="r_a5110fb8c13b91a63bc679a29ee94e788"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5110fb8c13b91a63bc679a29ee94e788">Vector3D</a> (double value)</td></tr>
+<tr class="memdesc:a5110fb8c13b91a63bc679a29ee94e788"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создаёт вектор (value, value, value).  <br /></td></tr>
+<tr class="memitem:abd851542da40b1168edcad11fa83b7c2" id="r_abd851542da40b1168edcad11fa83b7c2"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#abd851542da40b1168edcad11fa83b7c2">Vector3D</a> (double x, double y, double z)</td></tr>
+<tr class="memdesc:abd851542da40b1168edcad11fa83b7c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создаёт вектор по трём координатам.  <br /></td></tr>
+<tr class="memitem:ab44979be6b9bb7b514faa44b1c287eb4" id="r_ab44979be6b9bb7b514faa44b1c287eb4"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab44979be6b9bb7b514faa44b1c287eb4">Vector3D</a> (const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;other)</td></tr>
+<tr class="memdesc:ab44979be6b9bb7b514faa44b1c287eb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Копирующий конструктор.  <br /></td></tr>
+<tr class="memitem:ac5856e429419cc3b323448142f6593ec" id="r_ac5856e429419cc3b323448142f6593ec"><td class="memItemLeft"><a class="el" href="class_vector3_d.html">Vector3D</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ac5856e429419cc3b323448142f6593ec">operator=</a> (const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;other)=default</td></tr>
+<tr class="memdesc:ac5856e429419cc3b323448142f6593ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Копирующее присваивание (стандартное поведение).  <br /></td></tr>
+<tr class="memitem:ae4fde5759270bf5bcf615f12f0823a8c" id="r_ae4fde5759270bf5bcf615f12f0823a8c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae4fde5759270bf5bcf615f12f0823a8c">~Vector3D</a> ()</td></tr>
+<tr class="memdesc:ae4fde5759270bf5bcf615f12f0823a8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Деструктор: выводит сообщение об уничтожении вектора.  <br /></td></tr>
+<tr class="memitem:ac0976f69fab9e3d719202f630f71e5c6" id="r_ac0976f69fab9e3d719202f630f71e5c6"><td class="memItemLeft"><a class="el" href="class_vector3_d.html">Vector3D</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ac0976f69fab9e3d719202f630f71e5c6">operator++</a> ()</td></tr>
+<tr class="memdesc:ac0976f69fab9e3d719202f630f71e5c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Префиксный инкремент: увеличивает длину на 1%.  <br /></td></tr>
+<tr class="memitem:a7917d05f04e4ff1131c2ba72436570a8" id="r_a7917d05f04e4ff1131c2ba72436570a8"><td class="memItemLeft"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight"><a class="el" href="#a7917d05f04e4ff1131c2ba72436570a8">operator++</a> (int)</td></tr>
+<tr class="memdesc:a7917d05f04e4ff1131c2ba72436570a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Постфиксный инкремент: увеличивает длину на 1%.  <br /></td></tr>
+<tr class="memitem:a9587ff5a4eed9b368a31e108846423d6" id="r_a9587ff5a4eed9b368a31e108846423d6"><td class="memItemLeft"><a class="el" href="class_vector3_d.html">Vector3D</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a9587ff5a4eed9b368a31e108846423d6">operator--</a> ()</td></tr>
+<tr class="memdesc:a9587ff5a4eed9b368a31e108846423d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Префиксный декремент: уменьшает длину на 1%.  <br /></td></tr>
+<tr class="memitem:a3dd6a9a81367d2818fed01f181597d89" id="r_a3dd6a9a81367d2818fed01f181597d89"><td class="memItemLeft"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3dd6a9a81367d2818fed01f181597d89">operator--</a> (int)</td></tr>
+<tr class="memdesc:a3dd6a9a81367d2818fed01f181597d89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Постфиксный декремент: уменьшает длину на 1%.  <br /></td></tr>
+<tr class="memitem:a546241ecc51e49e05e7672ffde26bbf8" id="r_a546241ecc51e49e05e7672ffde26bbf8"><td class="memItemLeft"><a class="el" href="class_vector3_d.html">Vector3D</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a546241ecc51e49e05e7672ffde26bbf8">operator+=</a> (const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;other)</td></tr>
+<tr class="memdesc:a546241ecc51e49e05e7672ffde26bbf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Прибавляет другой вектор.  <br /></td></tr>
+<tr class="memitem:a799f712590c47cc435b929718586555c" id="r_a799f712590c47cc435b929718586555c"><td class="memItemLeft"><a class="el" href="class_vector3_d.html">Vector3D</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a799f712590c47cc435b929718586555c">operator-=</a> (const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;other)</td></tr>
+<tr class="memdesc:a799f712590c47cc435b929718586555c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вычитает другой вектор.  <br /></td></tr>
+<tr class="memitem:ad4ee8cd5020243f14fbe6008832f5252" id="r_ad4ee8cd5020243f14fbe6008832f5252"><td class="memItemLeft"><a class="el" href="class_vector3_d.html">Vector3D</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ad4ee8cd5020243f14fbe6008832f5252">operator*=</a> (double k)</td></tr>
+<tr class="memdesc:ad4ee8cd5020243f14fbe6008832f5252"><td class="mdescLeft">&#160;</td><td class="mdescRight">Умножает вектор на число.  <br /></td></tr>
+<tr class="memitem:a28a46216d8a88c18543cc2eaec0203d0" id="r_a28a46216d8a88c18543cc2eaec0203d0"><td class="memItemLeft"><a class="el" href="class_vector3_d.html">Vector3D</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a28a46216d8a88c18543cc2eaec0203d0">operator/=</a> (double k)</td></tr>
+<tr class="memdesc:a28a46216d8a88c18543cc2eaec0203d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Делит вектор на число.  <br /></td></tr>
+<tr class="memitem:aacaf251c119422f17db7195a53561d13" id="r_aacaf251c119422f17db7195a53561d13"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aacaf251c119422f17db7195a53561d13">operator double</a> () const</td></tr>
+<tr class="memdesc:aacaf251c119422f17db7195a53561d13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Явное преобразование в double — длина вектора.  <br /></td></tr>
+<tr class="memitem:a4ddb90e85e10f0f32475725cb966a5ce" id="r_a4ddb90e85e10f0f32475725cb966a5ce"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a4ddb90e85e10f0f32475725cb966a5ce">length</a> () const</td></tr>
+<tr class="memdesc:a4ddb90e85e10f0f32475725cb966a5ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Длина вектора. Увеличивает счётчик lengthCalls.  <br /></td></tr>
+<tr class="memitem:a0da987130c3ca5253ca428409798b1e6" id="r_a0da987130c3ca5253ca428409798b1e6"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a0da987130c3ca5253ca428409798b1e6">dot</a> (const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;other) const</td></tr>
+<tr class="memdesc:a0da987130c3ca5253ca428409798b1e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Скалярное произведение с другим вектором.  <br /></td></tr>
+<tr class="memitem:a6eb2b565b36b32858b79714151fc6df0" id="r_a6eb2b565b36b32858b79714151fc6df0"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a6eb2b565b36b32858b79714151fc6df0">getX</a> () const</td></tr>
+<tr class="memdesc:a6eb2b565b36b32858b79714151fc6df0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Координата X.  <br /></td></tr>
+<tr class="memitem:a40ae4bf4605ba79725876e00861f74c6" id="r_a40ae4bf4605ba79725876e00861f74c6"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a40ae4bf4605ba79725876e00861f74c6">getY</a> () const</td></tr>
+<tr class="memdesc:a40ae4bf4605ba79725876e00861f74c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Координата Y.  <br /></td></tr>
+<tr class="memitem:a9a4b4c6ee6f7bffa65fb81b2ace4a8eb" id="r_a9a4b4c6ee6f7bffa65fb81b2ace4a8eb"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a9a4b4c6ee6f7bffa65fb81b2ace4a8eb">getZ</a> () const</td></tr>
+<tr class="memdesc:a9a4b4c6ee6f7bffa65fb81b2ace4a8eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Координата Z.  <br /></td></tr>
+<tr class="memitem:abaed1a1f6d0262a75e73a5b7a139086f" id="r_abaed1a1f6d0262a75e73a5b7a139086f"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#abaed1a1f6d0262a75e73a5b7a139086f">getLengthCalls</a> () const</td></tr>
+<tr class="memdesc:abaed1a1f6d0262a75e73a5b7a139086f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сколько раз у объекта считали длину.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a7810908924eaffb849c5d818fb96904b" id="r_a7810908924eaffb849c5d818fb96904b"><td class="memItemLeft">static int&#160;</td><td class="memItemRight"><a class="el" href="#a7810908924eaffb849c5d818fb96904b">getCreatedCount</a> ()</td></tr>
+<tr class="memdesc:a7810908924eaffb849c5d818fb96904b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сколько векторов создано с запуска программы.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:a3c086dfccfc57dd996e9b8600098a430" id="r_a3c086dfccfc57dd996e9b8600098a430"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a3c086dfccfc57dd996e9b8600098a430">x</a></td></tr>
+<tr class="memdesc:a3c086dfccfc57dd996e9b8600098a430"><td class="mdescLeft">&#160;</td><td class="mdescRight">Координата X.  <br /></td></tr>
+<tr class="memitem:adcec384756103d26d1181e45d5a0fd78" id="r_adcec384756103d26d1181e45d5a0fd78"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#adcec384756103d26d1181e45d5a0fd78">y</a></td></tr>
+<tr class="memdesc:adcec384756103d26d1181e45d5a0fd78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Координата Y.  <br /></td></tr>
+<tr class="memitem:a7321f3ff785f275c4d83f7d1b951752a" id="r_a7321f3ff785f275c4d83f7d1b951752a"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a7321f3ff785f275c4d83f7d1b951752a">z</a></td></tr>
+<tr class="memdesc:a7321f3ff785f275c4d83f7d1b951752a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Координата Z.  <br /></td></tr>
+<tr class="memitem:afd21a54f7f3c2d0b60e49fba14fb0c84" id="r_afd21a54f7f3c2d0b60e49fba14fb0c84"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#afd21a54f7f3c2d0b60e49fba14fb0c84">lengthCalls</a></td></tr>
+<tr class="memdesc:afd21a54f7f3c2d0b60e49fba14fb0c84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сколько раз у объекта считали длину; mutable — меняется даже у const-объекта  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-attribs" class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Закрытые статические данные</h2></td></tr>
+<tr class="memitem:ae90b9491db90965874f8a2bd3b6d4f2c" id="r_ae90b9491db90965874f8a2bd3b6d4f2c"><td class="memItemLeft">static int&#160;</td><td class="memItemRight"><a class="el" href="#ae90b9491db90965874f8a2bd3b6d4f2c">createdCount</a> = 0</td></tr>
+<tr class="memdesc:ae90b9491db90965874f8a2bd3b6d4f2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сколько векторов создано с запуска программы (включая копии).  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+Друзья</h2></td></tr>
+<tr class="memitem:af0d48f19b504cc71c7af49b5f3709cac" id="r_af0d48f19b504cc71c7af49b5f3709cac"><td class="memItemLeft"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight"><a class="el" href="#af0d48f19b504cc71c7af49b5f3709cac">operator+</a> (<a class="el" href="class_vector3_d.html">Vector3D</a> lhs, const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;rhs)</td></tr>
+<tr class="memdesc:af0d48f19b504cc71c7af49b5f3709cac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сумма векторов (реализована через +=).  <br /></td></tr>
+<tr class="memitem:a60e6c6a96f162dd19925b58b7d02b8fd" id="r_a60e6c6a96f162dd19925b58b7d02b8fd"><td class="memItemLeft"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight"><a class="el" href="#a60e6c6a96f162dd19925b58b7d02b8fd">operator-</a> (<a class="el" href="class_vector3_d.html">Vector3D</a> lhs, const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;rhs)</td></tr>
+<tr class="memdesc:a60e6c6a96f162dd19925b58b7d02b8fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Разность векторов (реализована через -=).  <br /></td></tr>
+<tr class="memitem:acc665881203f773a9c7550d1e4bf294c" id="r_acc665881203f773a9c7550d1e4bf294c"><td class="memItemLeft"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight"><a class="el" href="#acc665881203f773a9c7550d1e4bf294c">operator*</a> (<a class="el" href="class_vector3_d.html">Vector3D</a> lhs, double k)</td></tr>
+<tr class="memdesc:acc665881203f773a9c7550d1e4bf294c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вектор, умноженный на число (реализовано через *=).  <br /></td></tr>
+<tr class="memitem:aeedf2bc038ff6fbba2b0b1d5c1470ee4" id="r_aeedf2bc038ff6fbba2b0b1d5c1470ee4"><td class="memItemLeft"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight"><a class="el" href="#aeedf2bc038ff6fbba2b0b1d5c1470ee4">operator*</a> (double k, <a class="el" href="class_vector3_d.html">Vector3D</a> rhs)</td></tr>
+<tr class="memdesc:aeedf2bc038ff6fbba2b0b1d5c1470ee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Число, умноженное на вектор (реализовано через *=).  <br /></td></tr>
+<tr class="memitem:ab9e0915cdba6c3139ef92ae0f486249c" id="r_ab9e0915cdba6c3139ef92ae0f486249c"><td class="memItemLeft"><a class="el" href="class_vector3_d.html">Vector3D</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab9e0915cdba6c3139ef92ae0f486249c">operator/</a> (<a class="el" href="class_vector3_d.html">Vector3D</a> lhs, double k)</td></tr>
+<tr class="memdesc:ab9e0915cdba6c3139ef92ae0f486249c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вектор, делённый на число (реализовано через /=).  <br /></td></tr>
+<tr class="memitem:af2899258858cfcb9f9044dd71e46c5f4" id="r_af2899258858cfcb9f9044dd71e46c5f4"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#af2899258858cfcb9f9044dd71e46c5f4">operator&lt;</a> (const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;a, const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;b)</td></tr>
+<tr class="memdesc:af2899258858cfcb9f9044dd71e46c5f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Длина a меньше длины b.  <br /></td></tr>
+<tr class="memitem:a8c6eef497206a3daf0f3fcbaaf22de2f" id="r_a8c6eef497206a3daf0f3fcbaaf22de2f"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a8c6eef497206a3daf0f3fcbaaf22de2f">operator&gt;</a> (const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;a, const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;b)</td></tr>
+<tr class="memdesc:a8c6eef497206a3daf0f3fcbaaf22de2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Длина a больше длины b.  <br /></td></tr>
+<tr class="memitem:ae42fab8d56d96f7d705bdbedaf247cfd" id="r_ae42fab8d56d96f7d705bdbedaf247cfd"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ae42fab8d56d96f7d705bdbedaf247cfd">operator&lt;=</a> (const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;a, const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;b)</td></tr>
+<tr class="memdesc:ae42fab8d56d96f7d705bdbedaf247cfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Длина a не больше длины b.  <br /></td></tr>
+<tr class="memitem:a26a3aa0c73b5668a2508cf4e80314d91" id="r_a26a3aa0c73b5668a2508cf4e80314d91"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a26a3aa0c73b5668a2508cf4e80314d91">operator&gt;=</a> (const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;a, const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;b)</td></tr>
+<tr class="memdesc:a26a3aa0c73b5668a2508cf4e80314d91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Длина a не меньше длины b.  <br /></td></tr>
+<tr class="memitem:a710ecbbaa26d921c713ecf7d1e21fdec" id="r_a710ecbbaa26d921c713ecf7d1e21fdec"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a710ecbbaa26d921c713ecf7d1e21fdec">operator==</a> (const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;a, const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;b)</td></tr>
+<tr class="memdesc:a710ecbbaa26d921c713ecf7d1e21fdec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Длины равны (с точностью EPS).  <br /></td></tr>
+<tr class="memitem:a2b3314f2543fa703afcc78bb4fa756f4" id="r_a2b3314f2543fa703afcc78bb4fa756f4"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a2b3314f2543fa703afcc78bb4fa756f4">operator!=</a> (const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;a, const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;b)</td></tr>
+<tr class="memdesc:a2b3314f2543fa703afcc78bb4fa756f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Длины не равны.  <br /></td></tr>
+<tr class="memitem:a8347ec585d1f353059e7f5e59a3385a5" id="r_a8347ec585d1f353059e7f5e59a3385a5"><td class="memItemLeft">std::ostream &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a8347ec585d1f353059e7f5e59a3385a5">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;v)</td></tr>
+<tr class="memdesc:a8347ec585d1f353059e7f5e59a3385a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вывод вектора в поток в виде (x, y, z).  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Трёхмерный вектор (x, y, z). </p>
+<p>Поддерживает изменение длины на ±1% (++ / &ndash;), сложение и вычитание векторов, умножение и деление на число, сравнение векторов по длине. Ведёт подсчёт всех векторов, созданных с запуска программы. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(ы)</h2>
+<a id="a0b11a8d75da427b27443d8a94d0d296c" name="a0b11a8d75da427b27443d8a94d0d296c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b11a8d75da427b27443d8a94d0d296c">&#9670;&#160;</a></span>Vector3D() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3D::Vector3D </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Конструктор по умолчанию: нулевой вектор (0, 0, 0). </p>
+
+</div>
+</div>
+<a id="a5110fb8c13b91a63bc679a29ee94e788" name="a5110fb8c13b91a63bc679a29ee94e788"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5110fb8c13b91a63bc679a29ee94e788">&#9670;&#160;</a></span>Vector3D() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3D::Vector3D </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Создаёт вектор (value, value, value). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Значение всех трёх координат. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>explicit запрещает неявное преобразование числа в вектор. </dd></dl>
+
+</div>
+</div>
+<a id="abd851542da40b1168edcad11fa83b7c2" name="abd851542da40b1168edcad11fa83b7c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd851542da40b1168edcad11fa83b7c2">&#9670;&#160;</a></span>Vector3D() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3D::Vector3D </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>z</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создаёт вектор по трём координатам. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Координата X. </td></tr>
+    <tr><td class="paramname">y</td><td>Координата Y. </td></tr>
+    <tr><td class="paramname">z</td><td>Координата Z. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab44979be6b9bb7b514faa44b1c287eb4" name="ab44979be6b9bb7b514faa44b1c287eb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab44979be6b9bb7b514faa44b1c287eb4">&#9670;&#160;</a></span>Vector3D() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3D::Vector3D </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Копирующий конструктор. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Копируемый вектор. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Копия тоже увеличивает счётчик созданных векторов. </dd></dl>
+
+</div>
+</div>
+<a id="ae4fde5759270bf5bcf615f12f0823a8c" name="ae4fde5759270bf5bcf615f12f0823a8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4fde5759270bf5bcf615f12f0823a8c">&#9670;&#160;</a></span>~Vector3D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3D::~Vector3D </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Деструктор: выводит сообщение об уничтожении вектора. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="a0da987130c3ca5253ca428409798b1e6" name="a0da987130c3ca5253ca428409798b1e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0da987130c3ca5253ca428409798b1e6">&#9670;&#160;</a></span>dot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Vector3D::dot </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Скалярное произведение с другим вектором. </p>
+
+</div>
+</div>
+<a id="a7810908924eaffb849c5d818fb96904b" name="a7810908924eaffb849c5d818fb96904b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7810908924eaffb849c5d818fb96904b">&#9670;&#160;</a></span>getCreatedCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Vector3D::getCreatedCount </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Сколько векторов создано с запуска программы. </p>
+
+</div>
+</div>
+<a id="abaed1a1f6d0262a75e73a5b7a139086f" name="abaed1a1f6d0262a75e73a5b7a139086f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abaed1a1f6d0262a75e73a5b7a139086f">&#9670;&#160;</a></span>getLengthCalls()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Vector3D::getLengthCalls </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сколько раз у объекта считали длину. </p>
+
+</div>
+</div>
+<a id="a6eb2b565b36b32858b79714151fc6df0" name="a6eb2b565b36b32858b79714151fc6df0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6eb2b565b36b32858b79714151fc6df0">&#9670;&#160;</a></span>getX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Vector3D::getX </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Координата X. </p>
+
+</div>
+</div>
+<a id="a40ae4bf4605ba79725876e00861f74c6" name="a40ae4bf4605ba79725876e00861f74c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40ae4bf4605ba79725876e00861f74c6">&#9670;&#160;</a></span>getY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Vector3D::getY </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Координата Y. </p>
+
+</div>
+</div>
+<a id="a9a4b4c6ee6f7bffa65fb81b2ace4a8eb" name="a9a4b4c6ee6f7bffa65fb81b2ace4a8eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a4b4c6ee6f7bffa65fb81b2ace4a8eb">&#9670;&#160;</a></span>getZ()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Vector3D::getZ </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Координата Z. </p>
+
+</div>
+</div>
+<a id="a4ddb90e85e10f0f32475725cb966a5ce" name="a4ddb90e85e10f0f32475725cb966a5ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ddb90e85e10f0f32475725cb966a5ce">&#9670;&#160;</a></span>length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Vector3D::length </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Длина вектора. Увеличивает счётчик lengthCalls. </p>
+
+</div>
+</div>
+<a id="aacaf251c119422f17db7195a53561d13" name="aacaf251c119422f17db7195a53561d13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacaf251c119422f17db7195a53561d13">&#9670;&#160;</a></span>operator double()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3D::operator double </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Явное преобразование в double — длина вектора. </p>
+
+</div>
+</div>
+<a id="ad4ee8cd5020243f14fbe6008832f5252" name="ad4ee8cd5020243f14fbe6008832f5252"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4ee8cd5020243f14fbe6008832f5252">&#9670;&#160;</a></span>operator*=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> &amp; Vector3D::operator*= </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>k</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Умножает вектор на число. </p>
+
+</div>
+</div>
+<a id="ac0976f69fab9e3d719202f630f71e5c6" name="ac0976f69fab9e3d719202f630f71e5c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0976f69fab9e3d719202f630f71e5c6">&#9670;&#160;</a></span>operator++() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> &amp; Vector3D::operator++ </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Префиксный инкремент: увеличивает длину на 1%. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Ссылка на изменённый вектор. </dd></dl>
+
+</div>
+</div>
+<a id="a7917d05f04e4ff1131c2ba72436570a8" name="a7917d05f04e4ff1131c2ba72436570a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7917d05f04e4ff1131c2ba72436570a8">&#9670;&#160;</a></span>operator++() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> Vector3D::operator++ </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Постфиксный инкремент: увеличивает длину на 1%. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Копия вектора до изменения. </dd></dl>
+
+</div>
+</div>
+<a id="a546241ecc51e49e05e7672ffde26bbf8" name="a546241ecc51e49e05e7672ffde26bbf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a546241ecc51e49e05e7672ffde26bbf8">&#9670;&#160;</a></span>operator+=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> &amp; Vector3D::operator+= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Прибавляет другой вектор. </p>
+
+</div>
+</div>
+<a id="a9587ff5a4eed9b368a31e108846423d6" name="a9587ff5a4eed9b368a31e108846423d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9587ff5a4eed9b368a31e108846423d6">&#9670;&#160;</a></span>operator--() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> &amp; Vector3D::operator-- </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Префиксный декремент: уменьшает длину на 1%. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Ссылка на изменённый вектор. </dd></dl>
+
+</div>
+</div>
+<a id="a3dd6a9a81367d2818fed01f181597d89" name="a3dd6a9a81367d2818fed01f181597d89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dd6a9a81367d2818fed01f181597d89">&#9670;&#160;</a></span>operator--() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> Vector3D::operator-- </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Постфиксный декремент: уменьшает длину на 1%. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Копия вектора до изменения. </dd></dl>
+
+</div>
+</div>
+<a id="a799f712590c47cc435b929718586555c" name="a799f712590c47cc435b929718586555c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a799f712590c47cc435b929718586555c">&#9670;&#160;</a></span>operator-=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> &amp; Vector3D::operator-= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Вычитает другой вектор. </p>
+
+</div>
+</div>
+<a id="a28a46216d8a88c18543cc2eaec0203d0" name="a28a46216d8a88c18543cc2eaec0203d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28a46216d8a88c18543cc2eaec0203d0">&#9670;&#160;</a></span>operator/=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> &amp; Vector3D::operator/= </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>k</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Делит вектор на число. </p>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>При k == 0 (вектор не изменяется). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac5856e429419cc3b323448142f6593ec" name="ac5856e429419cc3b323448142f6593ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5856e429419cc3b323448142f6593ec">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> &amp; Vector3D::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Копирующее присваивание (стандартное поведение). </p>
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">Друзья класса и относящимся к классу обозначения</h2>
+<a id="a2b3314f2543fa703afcc78bb4fa756f4" name="a2b3314f2543fa703afcc78bb4fa756f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b3314f2543fa703afcc78bb4fa756f4">&#9670;&#160;</a></span>operator!=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Длины не равны. </p>
+
+</div>
+</div>
+<a id="aeedf2bc038ff6fbba2b0b1d5c1470ee4" name="aeedf2bc038ff6fbba2b0b1d5c1470ee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeedf2bc038ff6fbba2b0b1d5c1470ee4">&#9670;&#160;</a></span>operator* <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> operator* </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>k</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Число, умноженное на вектор (реализовано через *=). </p>
+
+</div>
+</div>
+<a id="acc665881203f773a9c7550d1e4bf294c" name="acc665881203f773a9c7550d1e4bf294c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc665881203f773a9c7550d1e4bf294c">&#9670;&#160;</a></span>operator* <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> operator* </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>lhs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>k</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Вектор, умноженный на число (реализовано через *=). </p>
+
+</div>
+</div>
+<a id="af0d48f19b504cc71c7af49b5f3709cac" name="af0d48f19b504cc71c7af49b5f3709cac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0d48f19b504cc71c7af49b5f3709cac">&#9670;&#160;</a></span>operator+</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> operator+ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>lhs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Сумма векторов (реализована через +=). </p>
+
+</div>
+</div>
+<a id="a60e6c6a96f162dd19925b58b7d02b8fd" name="a60e6c6a96f162dd19925b58b7d02b8fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60e6c6a96f162dd19925b58b7d02b8fd">&#9670;&#160;</a></span>operator-</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> operator- </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>lhs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Разность векторов (реализована через -=). </p>
+
+</div>
+</div>
+<a id="ab9e0915cdba6c3139ef92ae0f486249c" name="ab9e0915cdba6c3139ef92ae0f486249c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9e0915cdba6c3139ef92ae0f486249c">&#9670;&#160;</a></span>operator/</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_vector3_d.html">Vector3D</a> operator/ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vector3_d.html">Vector3D</a></td>          <td class="paramname"><span class="paramname"><em>lhs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>k</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Вектор, делённый на число (реализовано через /=). </p>
+
+</div>
+</div>
+<a id="af2899258858cfcb9f9044dd71e46c5f4" name="af2899258858cfcb9f9044dd71e46c5f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2899258858cfcb9f9044dd71e46c5f4">&#9670;&#160;</a></span>operator&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Длина a меньше длины b. </p>
+
+</div>
+</div>
+<a id="a8347ec585d1f353059e7f5e59a3385a5" name="a8347ec585d1f353059e7f5e59a3385a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8347ec585d1f353059e7f5e59a3385a5">&#9670;&#160;</a></span>operator&lt;&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>out</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Вывод вектора в поток в виде (x, y, z). </p>
+
+</div>
+</div>
+<a id="ae42fab8d56d96f7d705bdbedaf247cfd" name="ae42fab8d56d96f7d705bdbedaf247cfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae42fab8d56d96f7d705bdbedaf247cfd">&#9670;&#160;</a></span>operator&lt;=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&lt;= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Длина a не больше длины b. </p>
+
+</div>
+</div>
+<a id="a710ecbbaa26d921c713ecf7d1e21fdec" name="a710ecbbaa26d921c713ecf7d1e21fdec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a710ecbbaa26d921c713ecf7d1e21fdec">&#9670;&#160;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Длины равны (с точностью EPS). </p>
+
+</div>
+</div>
+<a id="a8c6eef497206a3daf0f3fcbaaf22de2f" name="a8c6eef497206a3daf0f3fcbaaf22de2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c6eef497206a3daf0f3fcbaaf22de2f">&#9670;&#160;</a></span>operator&gt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&gt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Длина a больше длины b. </p>
+
+</div>
+</div>
+<a id="a26a3aa0c73b5668a2508cf4e80314d91" name="a26a3aa0c73b5668a2508cf4e80314d91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26a3aa0c73b5668a2508cf4e80314d91">&#9670;&#160;</a></span>operator&gt;=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&gt;= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_vector3_d.html">Vector3D</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Длина a не меньше длины b. </p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="ae90b9491db90965874f8a2bd3b6d4f2c" name="ae90b9491db90965874f8a2bd3b6d4f2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae90b9491db90965874f8a2bd3b6d4f2c">&#9670;&#160;</a></span>createdCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Vector3D::createdCount = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Сколько векторов создано с запуска программы (включая копии). </p>
+
+</div>
+</div>
+<a id="afd21a54f7f3c2d0b60e49fba14fb0c84" name="afd21a54f7f3c2d0b60e49fba14fb0c84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd21a54f7f3c2d0b60e49fba14fb0c84">&#9670;&#160;</a></span>lengthCalls</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Vector3D::lengthCalls</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel mutable">mutable</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Сколько раз у объекта считали длину; mutable — меняется даже у const-объекта </p>
+
+</div>
+</div>
+<a id="a3c086dfccfc57dd996e9b8600098a430" name="a3c086dfccfc57dd996e9b8600098a430"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c086dfccfc57dd996e9b8600098a430">&#9670;&#160;</a></span>x</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Vector3D::x</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Координата X. </p>
+
+</div>
+</div>
+<a id="adcec384756103d26d1181e45d5a0fd78" name="adcec384756103d26d1181e45d5a0fd78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcec384756103d26d1181e45d5a0fd78">&#9670;&#160;</a></span>y</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Vector3D::y</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Координата Y. </p>
+
+</div>
+</div>
+<a id="a7321f3ff785f275c4d83f7d1b951752a" name="a7321f3ff785f275c4d83f7d1b951752a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7321f3ff785f275c4d83f7d1b951752a">&#9670;&#160;</a></span>z</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Vector3D::z</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Координата Z. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="_vector3_d_8h_source.html">Vector3D.h</a></li>
+<li><a class="el" href="_vector3_d_8cpp.html">Vector3D.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_vector3_d.html">Vector3D</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>
