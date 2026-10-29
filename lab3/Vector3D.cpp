@@ -50,3 +50,29 @@ int Vector3D::getLengthCalls() const {
 int Vector3D::getCreatedCount() {
     return createdCount;
 }
+
+Vector3D& Vector3D::operator++() {
+    x *= 1.01;
+    y *= 1.01;
+    z *= 1.01;
+    return *this;
+}
+
+Vector3D Vector3D::operator++(int) {
+    Vector3D old(*this);
+    ++(*this);
+    return old;
+}
+
+Vector3D& Vector3D::operator--() {
+    x *= 0.99;
+    y *= 0.99;
+    z *= 0.99;
+    return *this;
+}
+
+Vector3D Vector3D::operator--(int) {
+    Vector3D old(*this);
+    --(*this);
+    return old;
+}
