@@ -166,3 +166,7 @@ bool operator==(const Vector3D& a, const Vector3D& b) {
 bool operator!=(const Vector3D& a, const Vector3D& b) {
     return !(a == b);
 }
+
+Vector3D::operator double() const {
+    return length();
+}
