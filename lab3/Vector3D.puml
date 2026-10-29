@@ -1,0 +1,57 @@
+@startuml Vector3D
+skinparam classAttributeIconSize 0
+
+class Vector3D {
+  - x : double
+  - y : double
+  - z : double
+  - lengthCalls : int {mutable}
+  - {static} createdCount : int
+  --
+  + Vector3D()
+  + <<explicit>> Vector3D(value : double)
+  + Vector3D(x : double, y : double, z : double)
+  + Vector3D(other : const Vector3D&)
+  + operator=(other : const Vector3D&) : Vector3D&
+  + ~Vector3D()
+  ..
+  + operator++() : Vector3D&
+  + operator++(int) : Vector3D
+  + operator--() : Vector3D&
+  + operator--(int) : Vector3D
+  + operator+=(other : const Vector3D&) : Vector3D&
+  + operator-=(other : const Vector3D&) : Vector3D&
+  + operator*=(k : double) : Vector3D&
+  + operator/=(k : double) : Vector3D&
+  + <<explicit>> operator double() const
+  ..
+  + length() const : double
+  + dot(other : const Vector3D&) const : double
+  + getX() const : double
+  + getY() const : double
+  + getZ() const : double
+  + getLengthCalls() const : int
+  + {static} getCreatedCount() : int
+}
+
+class "Дружественные операторы" as Friends <<friend>> {
+  + operator+(lhs : Vector3D, rhs : const Vector3D&) : Vector3D
+  + operator-(lhs : Vector3D, rhs : const Vector3D&) : Vector3D
+  + operator*(lhs : Vector3D, k : double) : Vector3D
+  + operator*(k : double, rhs : Vector3D) : Vector3D
+  + operator/(lhs : Vector3D, k : double) : Vector3D
+  + operator<(a, b : const Vector3D&) : bool
+  + operator>(a, b : const Vector3D&) : bool
+  + operator<=(a, b : const Vector3D&) : bool
+  + operator>=(a, b : const Vector3D&) : bool
+  + operator==(a, b : const Vector3D&) : bool
+  + operator!=(a, b : const Vector3D&) : bool
+  + operator<<(out : ostream&, v : const Vector3D&) : ostream&
+}
+
+Friends ..> Vector3D : <<friend>>
+
+note bottom of Friends
+  + - * / реализованы через += -= *= /=
+end note
+@enduml
