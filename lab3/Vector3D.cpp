@@ -2,6 +2,8 @@
 
 #include <cmath>
 
+#include <stdexcept>
+
 int Vector3D::createdCount = 0;
 
 Vector3D::Vector3D() : x(0), y(0), z(0), lengthCalls(0) {
@@ -75,4 +77,36 @@ Vector3D Vector3D::operator--(int) {
     Vector3D old(*this);
     --(*this);
     return old;
+}
+
+
+Vector3D& Vector3D::operator+=(const Vector3D& other) {
+    x += other.x;
+    y += other.y;
+    z += other.z;
+    return *this;
+}
+
+Vector3D& Vector3D::operator-=(const Vector3D& other) {
+    x -= other.x;
+    y -= other.y;
+    z -= other.z;
+    return *this;
+}
+
+Vector3D& Vector3D::operator*=(double k) {
+    x *= k;
+    y *= k;
+    z *= k;
+    return *this;
+}
+
+Vector3D& Vector3D::operator/=(double k) {
+    if (k == 0.0) {
+        throw std::invalid_argument("деление вектора на ноль");
+    }
+    x /= k;
+    y /= k;
+    z /= k;
+    return *this;
 }
