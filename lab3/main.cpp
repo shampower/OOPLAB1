@@ -3,6 +3,7 @@
 #include <windows.h>
 #endif
 
+#include <stdexcept>
 #include <iostream>
 #include <iomanip>
 #include "Vector3D.h"
@@ -36,6 +37,22 @@ int main() {
     std::cout << "--v вернул " << r3 << " (уже новое), длина v " << v.length() << '\n';
     Vector3D r4 = v--;
     std::cout << "v-- вернул " << r4 << " (старое), а v = " << v << "\n\n";
+    std::cout << "===== 3. += -= *= /= =====\n";
+    Vector3D c(1, 1, 1);
+    c += b;
+    std::cout << "c += b -> " << c << '\n';
+    c -= a;
+    std::cout << "c -= a -> " << c << '\n';
+    c *= 2;
+    std::cout << "c *= 2 -> " << c << '\n';
+    c /= 4;
+    std::cout << "c /= 4 -> " << c << '\n';
+    try {
+        c /= 0;
+    } catch (const std::invalid_argument& e) {
+        std::cout << "c /= 0 -> ошибка: " << e.what() << '\n';
+    }
+    std::cout << "c не испортился: " << c << "\n\n";
 
     std::cout << "\nКонец main, дальше деструкторы оставшихся векторов:\n";
     return 0;
