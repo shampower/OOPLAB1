@@ -1,0 +1,11 @@
+PROJECT_NAME           = "Лабораторная работа №3: Vector3D"
+OUTPUT_DIRECTORY       = docs
+OUTPUT_LANGUAGE        = Russian
+INPUT                  = Vector3D.h Vector3D.cpp main.cpp
+INPUT_ENCODING         = UTF-8
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+HAVE_DOT               = NO
