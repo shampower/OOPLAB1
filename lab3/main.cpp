@@ -25,6 +25,17 @@ int main() {
     std::cout << "b     = " << b << ", длина " << b.length() << '\n';
     std::cout << "aCopy = " << aCopy << '\n';
     std::cout << "Создано векторов: " << Vector3D::getCreatedCount() << "\n\n";
+    std::cout << "===== 2. ++ и -- (длина ±1%) =====\n";
+    Vector3D v(3, 4, 0);
+    std::cout << "v = " << v << ", длина " << v.length() << '\n';
+    Vector3D r1 = ++v;
+    std::cout << "++v вернул " << r1 << " (уже новое), длина v " << v.length() << '\n';
+    Vector3D r2 = v++;
+    std::cout << "v++ вернул " << r2 << " (старое), а v = " << v << '\n';
+    Vector3D r3 = --v;
+    std::cout << "--v вернул " << r3 << " (уже новое), длина v " << v.length() << '\n';
+    Vector3D r4 = v--;
+    std::cout << "v-- вернул " << r4 << " (старое), а v = " << v << "\n\n";
 
     std::cout << "\nКонец main, дальше деструкторы оставшихся векторов:\n";
     return 0;
