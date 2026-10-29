@@ -8,6 +8,10 @@
 #include <iomanip>
 #include "Vector3D.h"
 
+void printLength(const Vector3D& v) {
+    std::cout << "Длина " << v << " = " << v.length() << '\n';
+}
+
 int main() {
 #ifdef _WIN32
     SetConsoleOutputCP(CP_UTF8);
@@ -73,7 +77,7 @@ int main() {
         std::cout << "a / 0 -> ошибка: " << e.what() << '\n';
     }
     std::cout << '\n';
-        std::cout << "===== 5. Сравнения (по длине) =====\n";
+    std::cout << "===== 5. Сравнения (по длине) =====\n";
     Vector3D d(0, 0, 5);
     std::cout << "|a| = " << a.length() << ", |b| = " << b.length()
               << ", |d| = " << d.length() << '\n';
@@ -84,6 +88,47 @@ int main() {
     std::cout << "a == aCopy : " << (a == aCopy) << '\n';
     std::cout << "a != b     : " << (a != b) << '\n';
     std::cout << "a == d     : " << (a == d) << " (сравниваются длины, а не координаты)\n\n";
+
+    std::cout << "===== 6. Преобразования и explicit =====\n";
+    double lenA = static_cast<double>(a);
+    Vector3D fromNumber = static_cast<Vector3D>(2.0);
+    std::cout << "static_cast<double>(a)     = " << lenA << '\n';
+    std::cout << "static_cast<Vector3D>(2.0) = " << fromNumber << '\n';
+    printLength(Vector3D(7.0));
+    std::cout << "Без explicit эти строки скомпилировались бы, а с explicit - ошибка:\n"
+                 "  Vector3D w = 5.0;   // число стало бы вектором (5, 5, 5)\n"
+                 "  a += 1.0;           // к a прибавился бы (1, 1, 1)\n"
+                 "  printLength(3.0);   // в функцию вместо вектора ушло бы число\n"
+                 "  double l = a;       // неявно получили бы длину\n"
+                 "  if (a > 4.0) {}     // сравнение вектора с числом\n\n";
+    // Vector3D w = 5.0;
+    // a += 1.0;
+    // printLength(3.0);
+    // double l = a;
+    // if (a > 4.0) {}
+
+    std::cout << "===== 7. const-объект и mutable =====\n";
+    const Vector3D fixedVec(2, 3, 6);
+    std::cout << "Подсчётов длины у fixedVec: " << fixedVec.getLengthCalls() << '\n';
+    double l1 = fixedVec.length();
+    double l2 = fixedVec.length();
+    bool longer = fixedVec > a;
+    std::cout << "Длина " << l1 << " и " << l2 << ", длиннее a: " << longer << '\n';
+    std::cout << "Подсчётов длины у fixedVec: " << fixedVec.getLengthCalls()
+              << " (объект const, но mutable-поле изменилось)\n\n";
+    // fixedVec += a;
+    // ++fixedVec;
+
+    std::cout << "===== 8. Счётчик созданных векторов =====\n";
+    std::cout << "Создано с запуска программы: " << Vector3D::getCreatedCount()
+              << " (считаются и копии, в том числе временные)\n";
+    {
+        Vector3D temp(1, 0, 0);
+        std::cout << "Внутри блока создан temp, всего создано: "
+                  << Vector3D::getCreatedCount() << '\n';
+    }
+    std::cout << "temp уничтожен, а счётчик созданных не уменьшился: "
+              << Vector3D::getCreatedCount() << '\n';
 
     std::cout << "\nКонец main, дальше деструкторы оставшихся векторов:\n";
     return 0;
